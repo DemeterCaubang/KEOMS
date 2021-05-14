@@ -3,6 +3,7 @@
 * {
 	font-family: 'Open Sans', sans-serif;
 }
+
 body {
 	background-color: #F0FFF0;
 	margin: 0px;
@@ -10,10 +11,20 @@ body {
 
 nav {
 	height: 70px;
-	width: 100%;
-	background-color: #FFF;
+	width: 99%;
+	background-color: #CCFFCC;
+	padding: 10px;
 }
 
-a {
-	padding: 10px;
+.logo {
+	height: 60px;
+	width: 60px;
+}
+
+.material-icons {
+	float: right;
+}
+
+main {
+	text-align: center;
 }
