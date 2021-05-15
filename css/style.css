@@ -53,8 +53,14 @@ nav {
 	font-color: black;
 }
 
+aside {
+	height: 100%;
+	width: 150px;
+	background-color: #CCFFFF;
+	position: fixed;
+}
+
 main {
 	text-align: center;
-	position: fixed;
-	margin: 40px;
+	position: fized;
 }
