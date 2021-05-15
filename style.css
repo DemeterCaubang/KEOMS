@@ -21,10 +21,40 @@ nav {
 	width: 60px;
 }
 
-.material-icons {
+.notifs {
+	list-style: none;
+	width: 200px;
+	height: 50px;
+	overflow: hidden;
 	float: right;
+}
+
+.notifs .navi {
+	display: flex;
+}
+
+.notifs:hover {
+	height: 300px;
+	background-color: #FFF;
+}
+
+.notifs li {
+	padding: 10px;
+	border-bottom: 2px black solid;
+}
+
+.notifs li a {
+	text-decoration: none;
+	font-color: black;
+}
+
+.notifs li a:hover {
+	text-decoration: underline;
+	font-color: black;
 }
 
 main {
 	text-align: center;
+	position: fixed;
+	align-items: center;
 }
