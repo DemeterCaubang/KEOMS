@@ -60,7 +60,7 @@ aside {
 	position: fixed;
 }
 
-main {
+main, footer {
 	text-align: center;
-	position: fized;
 }
+

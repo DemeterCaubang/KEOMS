@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: #F0FFF0;
+	margin: 0px;
+}
+
+/* main navigation bar style */
+
+nav {
+	height: 70px;
+	width: 99%;
+	background-color: #CCFFCC;
+	padding: 10px;
+	position: fixed;
+}
+
+.logo {
+	height: 60px;
+	width: 60px;
+}
+
+.navi {
+	display: flex;
+	float: right
+}
+
+/* sidebar style */
+
+aside {
+	margin-top: 90px; 
+	height: 100%;
+	width: 150px;
+	background-color: #CCFFFF;
+	position: fixed;
+}
+
+main {
+	padding: 150px;
+}
+
+section {
+	height: 30px;
+	width: 50%;
+	overflow: hidden;
+	padding: 50px;
+}
+
+section:hover {
+	height: 250px;
+	background-color: #fff;
+}
+
+/* table style */
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: red;
+}
+
+/*footer style*/
+
+footer {
+	text-align: center;
+}
