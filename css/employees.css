@@ -7,6 +7,7 @@
 body {
 	background-color: #F0FFF0;
 	margin: 0px;
+	margin: 0px;
 }
 
 nav {
@@ -14,6 +15,7 @@ nav {
 	width: 99%;
 	background-color: #CCFFCC;
 	padding: 10px;
+	position: fixed;
 }
 
 .logo {
@@ -21,13 +23,33 @@ nav {
 	width: 60px;
 }
 
-main {
-	text-align: center;
+.navi {
 	display: flex;
-	justify-content: center;
+	float: right
+}
+
+aside {
+	margin-top: 90px; 
+	height: 100%;
+	width: 150px;
+	background-color: #CCFFFF;
+	position: fixed;
+}
+
+aside .sidenav li {
+	list-style: none;
+	align-items: center;
 }
 
 i {
+	font-size: 28px;
+}
+
+main {
+	padding: 150px;
+}
+
+section i {
 	font-size: 60px;
 }
 
@@ -35,8 +57,9 @@ section {
 	height: 200px;
 	width: 200px;
 	display: flex;
-	margin: 20px;
+		margin: 20px;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 	padding: 10px;
 	background-color: #fff;
