@@ -60,6 +60,15 @@ aside {
 	position: fixed;
 }
 
+aside .sidenav li {
+	list-style: none;
+	align-items: center;
+}
+
+i {
+	font-size: 28px;
+}
+
 main, footer {
 	text-align: center;
 }
