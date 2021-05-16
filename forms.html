@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KEOMS Forms</title>
+		<link rel="stylesheet" href="css/bills.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+		<script>
+			function result() {
+			x = document.getElementById("meter").value;
+			if (x > 80) {
+				document.getElementById("demo").innerHTML = "Equipment is faulty! BMO head has been alerted.";
+			} else {
+				document.getElementById("demo").innerHTML = "Technician's data has been submitted!";
+				}
+			}
+</script>
+		</script>
+	</head>
+	<body>
+		<nav>
+			<img src="images/KEOMS-logo.png" class="logo">
+			<a href="index.html">KEOMS</a>
+			<div class="navi">
+				<p>Technician</p>	
+				<span class="material-icons">face</span>
+				<span class="material-icons">notifications</span>
+			</div>
+		</nav>
+		<aside>
+			<ul class="sidenav">
+				<li>
+					<a href="">
+						<i class="fas fa-users"></i>
+						<p>employees</p>
+					</a>
+				</li>
+				<li>
+					<a href="reports.html">
+						<i class="fas fa-users"></i>
+						<p>reports</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="fas fa-users"></i>
+						<p>bills<p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="fas fa-users"></i>
+						<p>analytics<p>
+					</a>
+				</li>
+			</ul>
+		</aside>
+		<main> <center>
+			<section>
+			<p>Form</p>
+			<label for="name">Equipment</label>
+			<input type="text" id="name" name="name"><br><br>
+			<label for="name">Meters</label>
+			<input type="text" id="meter" name="meter"><br><br>
+			<button onclick="result()">Submit</button>
+			<button><a href="forms.html">Reset</a></button>
+			<p>Equipment capacity is 80 meters<p>
+			<p id="demo"></p>
+			</section>
+		</center> </main> 
+		<footer>
+			<p><a href="about-team.html">Created by the Pending Team</a></p>
+		</footer>
+<!-- https://developers.google.com/fonts/docs/material_icons
+	https://htmlcolorcodes.com/color-chart/web-safe-color-chart/ -->
+
+</body>
+</html>
