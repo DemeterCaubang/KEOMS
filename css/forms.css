@@ -49,6 +49,18 @@ main {
 	padding: 150px;
 }
 
+section {
+	height: 300px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+	background-color: #fff;
+	border-bottom: 3px solid #009879;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
 footer {
 	text-align: center;
 }
