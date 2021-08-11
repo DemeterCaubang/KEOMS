@@ -19,42 +19,102 @@
 <a href="#"><span class="material-icons">warning</span><p>Issue<br>Logs</p></a>
 </aside>
 
-<main style="display: flex; justify-content: center;">
-<table style="border-collapse: collapse;">
+<main style="margin-left: 180px; font-family: arial, sans-serif; text-align: left;">
+
+	<button>INSERT NEW REPORT</button>
+	<p>DATE: MAY 7, 2021</p>
+	
+	<div class="condition"style="display: flex; width: 50%; justify-content: space-between;">
+		<p>
+			CONDITION: 
+		</p>
+		<p class="condition">
+			GOOD <div style="width: 60px; height: 10px; background-color: #26FA26;"> </div>
+		</p>
+		<p class="condition">UNSTABLE <div style="width: 60px; height: 10px; background-color: #FF0000;"> </div>
+		</p>
+	</div>
+
+<table style="border-collapse: collapse; font-family: arial, sans-serif; width: 85%;">
   <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
+    <th>Quantity</th>
+    <th>Description</th>
+    <th>Brand/size/Spec.</th>
+	<th>Model No.</th>
+	<th>Serial No.</th>
+	<th>Location</th>
+	<th>Status/Condition</th>
+	<th>Remarks</th>
   </tr>
   <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
+    <td>2</td>
+    <td>Sight Glass</td>
+    <td>Danfoss 3/8x3/8</td>
+	<td></td>
+    <td></td>
+    <td>10th floor cocker</td>
+	<td><div style="width: 60px; height: 10px; background-color: #26FA26;"> </div></td>
+    <td>Ok</td>
   </tr>
   <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+    <td>1</td>
+    <td>Contact Cleaner</td>
+    <td>Hardex 400 ML</td>
+	<td></td>
+    <td></td>
+    <td>10th floor cocker</td>
+	<td><div style="width: 60px; height: 10px; background-color: #26FA26;"> </div></td>
+    <td>Ok</td>
   </tr>
   <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
+    <td>7</td>
+    <td>Polyetelene tape</td>
+    <td>White</td>
+	<td></td>
+    <td></td>
+    <td>10th floor cocker</td>
+	<td><div style="width: 60px; height: 10px; background-color: #26FA26;"> </div></td>
+    <td>Ok</td>
   </tr>
   <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
+    <td>10</td>
+    <td>Bearing</td>
+    <td>TNT 6202ZZ</td>
+	<td></td>
+    <td></td>
+    <td>10th floor cocker</td>
+	<td><div style="width: 60px; height: 10px; background-color: #26FA26;"> </div></td>
+    <td>Ok</td>
   </tr>
   <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
+    <td>1</td>
+    <td>Map Gas Tank</td>
+    <td>Benzomatic 140z/400g</td>
+	<td></td>
+    <td></td>
+    <td>10th floor cocker</td>
+	<td><div style="width: 60px; height: 10px; background-color: #26FA26;"> </div></td>
+    <td>Ok</td>
   </tr>
   <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
+    <td>2</td>
+    <td>Multipurpose cleaner</td>
+    <td>Armor All 140z/473ml</td>
+	<td></td>
+    <td></td>
+    <td>10th floor cocker</td>
+	<td><div style="width: 60px; height: 10px; background-color: #26FA26;"> </div></td>
+    <td>Ok</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Teplon tape</td>
+    <td>Britania 1"x10m</td>
+	<td></td>
+    <td></td>
+    <td>10th floor cocker</td>
+	<td><div style="width: 60px; height: 10px; background-color: #26FA26;"> </div></td>
+    <td>Ok</td>
   </tr>
 </table>
 </main>
@@ -96,7 +156,12 @@ main {
 text-align: center;
 }
 
-td, th {
+th {
+background-color: black;
+color: white;
+}
+
+td,th {
   border: 1px solid #dddddd;
   padding: 8px;
 }
@@ -107,12 +172,13 @@ td, th {
 <!-- References: https://medium.com/@romanejaquez/serving-icons-for-your-web-apps-tips-and-tricks-d8d62c0ebd2f 
 https://fonts.google.com/icons?selected=Material+Icons:favorite&icon.query=caution
 https://www.w3schools.com/html/html_tables.asp
-https://www.w3schools.com/html/html_tables.asp
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_shapes_rectangle
 
 Other goals:
 -make other pages
 -make webpages responsive
 -add logo
+-make INSERT NEW REPORT page
 -backend assist
 -->
 
