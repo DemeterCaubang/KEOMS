@@ -8,8 +8,8 @@
 
 <body style="margin: 0px; font-family: 'Roboto',sans-serif;">
 
-<nav style="height: 66px; background-color: #303494;">
-<h1 style="color: white;">keoms</h1>
+<nav style="height: 66px; background-color: #303494; margin: 0px;">
+<h1 style="color: white; padding: 20px;">keoms</h1>
 </nav>
 
 <aside>
@@ -18,30 +18,96 @@
 <a href="#"><span class="material-icons">rule_folder</span><p>Equipment<br>Inventory</p></a>
 <a href="#"><span class="material-icons">warning</span><p>Issue<br>Logs</p></a>
 </aside>
+
+<main style="display: flex; justify-content: center;">
+<table style="border-collapse: collapse;">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+</main>
+
 </body>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
 
+* {
+margin: 0px;
+}
+
 aside {
 width: 140px;
-height: 80%;
+height: 100%;
+background-color: #E1E1E1;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: #E1E1E1;
+position: fixed;
 }
 
 aside a {
 text-decoration: none;
 color: black;
 text-align: center;
+height: 90px;
+width: 90px;
+padding-top: 10px;
+margin-top: 10px;
 }
+
+aside a:hover {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+main {
+text-align: center;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
 
 </style>
 
 <!-- References: https://medium.com/@romanejaquez/serving-icons-for-your-web-apps-tips-and-tricks-d8d62c0ebd2f 
 https://fonts.google.com/icons?selected=Material+Icons:favorite&icon.query=caution
+https://www.w3schools.com/html/html_tables.asp
+https://www.w3schools.com/html/html_tables.asp
 
 Other goals:
 -make other pages
