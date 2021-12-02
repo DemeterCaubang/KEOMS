@@ -1,29 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
-
-body {
-	font-family: 'Josefin Sans', sans-serif;
-	background: #fff;
-}
 
 *{
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	text-decoration: none;
+	text-decoration: none;	
 }
 
 /*sidebar and its contents*/
 
-.sidebar {
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar {
 	position: fixed;
 	left: -250px;
 	width: 250px;
-	height: 100%;
+	height: 100vh;
 	background: #161E54;
 	padding: 30px 0px;
 }
 
-.sidebar header {
+.wrapper .sidebar header {
 	color: #FFA400;
 	text-align: center;
 	user-select: none;
@@ -32,7 +31,7 @@ body {
 	font-size: 32px;
 }
 
-.sidebar ul a {
+.wrapper .sidebar ul a {
 	display: block;
 	height: 100%;
 	width: 100%;
@@ -45,26 +44,29 @@ body {
 	border-top: 1px solid rgba(255,255,255,0.05);
 }
 
-.sidebar ul li a .fas{
+.wrapper .sidebar ul li a .fas{
   width: 25px;
 }
 
-ul li:hover{
+.wrapper .sidebar ul li:hover{
 	background-color: #0F00FF;
 }
 
-ul li:hover a {
+.wrapper .sidebar ul li:hover a {
 	color: #FFA400;
 	text-decoration: underline;
 }
 
-.sidebar .social_media{
-  display: flex;
-  left: 50%;
-  transform: translateX(20%);
+.wrapper .sidebar .social_media{
+	position: relative;
+	bottom: 70px; 
+	display: flex;
+	left: 0;
+	transform: translateX(20%);
+	padding-top: 145%;
 }
 
-.sidebar .social_media a{
+.wrapper .sidebar .social_media a{
   display: block;
   width: 40px;
   height: 40px;
@@ -74,7 +76,6 @@ ul li:hover a {
   color: #bdb8d7;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  padding-top: 145%;
 }
 
 /*sidebar button show and hide action*/
@@ -123,7 +124,6 @@ label #cancel {
 }
 
 #check:checked ~ label #btn {
-	left: 250px;
 	opacity: 0;
 	pointer-events: none;
 }
@@ -132,12 +132,39 @@ label #cancel {
 	left: 195px;
 }
 
+@media(max-width:700px){
+	#check:checked ~ .sidebar{
+		width: 100%;
+		align-items: center;
+	}
+	
+	#check:checked ~ label #cancel {
+		left: 85%;
+	}
+	
+	#check:checked .sidebar ul a{
+		text-align: center;
+	}
+
+}
+
 /*main page content*/
 
-.main_content .header {
+.wrapper .main_content{
+	transition: all .5s;
+}
+
+.wrapper .main_content .header {
 	padding: 25px 25px 25px 70px;
 	background: #D5D5D5;
 	color: #000;
 	border-bottom: 1px solid #e0e4e8;
-	transition: all .5s;
 }
+
+.wrapper .main_content .info{
+	padding: 25px 25px 25px 70px;
+	color: #000;
+	line-height: 25px;
+}
+
+/*original reference: https://www.youtube.com/watch?v=YesSVqjcDts */
