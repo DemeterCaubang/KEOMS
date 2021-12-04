@@ -1,1 +1,1 @@
-<?php header( 'Location: /KEOMS.html' ) ;  ?>
+<?php header( 'Location: /index.html' ) ;  ?>
