@@ -1,17 +1,15 @@
-
 *{
+	list-style: none;
+	text-decoration: none;
 	margin: 0;
 	padding: 0;
-	list-style: none;
-	text-decoration: none;	
+}
+
+.wrapper{
+	transform: translateY(-6%);
 }
 
 /*sidebar and its contents*/
-
-.wrapper{
-  display: flex;
-  position: relative;
-}
 
 .wrapper .sidebar {
 	position: fixed;
@@ -58,12 +56,8 @@
 }
 
 .wrapper .sidebar .social_media{
-	position: relative;
-	bottom: 70px; 
 	display: flex;
-	left: 0;
 	transform: translateX(20%);
-	padding-top: 145%;
 }
 
 .wrapper .sidebar .social_media a{
@@ -92,7 +86,7 @@ label #btn, label #cancel {
 
 label #btn {
 	left: 15px;
-	top: 15px;
+	top: 40px;
 	font-size: 24px;
 	color: #000;
 	padding: 6px 12px;
@@ -103,7 +97,7 @@ label #btn {
 label #cancel {
 	z-index: 1111;
 	left: -195px;
-	top: 17px;
+	top: 40px;
 	font-size: 24px;
 	color: #bdb8d7;
 	padding: 4px 9px;
@@ -116,7 +110,7 @@ label #cancel {
 }
 
 #check:checked ~ .main_content .header {
-	padding-left: 80px;
+	padding-left: 70px;
 }
 
 #check:checked ~ .main_content {
@@ -142,10 +136,13 @@ label #cancel {
 		left: 85%;
 	}
 	
-	#check:checked .sidebar ul a{
+	#check:checked ~ .sidebar ul a{
 		text-align: center;
 	}
 
+	#check:checked ~ .sidebar .social_media{
+		transform: translateX(40%);
+	}
 }
 
 /*main page content*/
@@ -155,7 +152,7 @@ label #cancel {
 }
 
 .wrapper .main_content .header {
-	padding: 25px 25px 25px 70px;
+	padding: 25px 25px 25px 70px;	
 	background: #D5D5D5;
 	color: #000;
 	border-bottom: 1px solid #e0e4e8;
