@@ -32,19 +32,19 @@
       <div class="col-md-4">
         <br>
 		<h2>BMO Employee</h2>
-        <p>Regular Privilege</p>
+        <p>Regular Privileges</p>
         <p><a class="btn btn-secondary" href="employee/index.html" role="button">Log in</a></p>
       </div>
       <div class="col-md-4">
         <br>
 		<h2>Lead Technician</h2>
-        <p>Admin Privilege</p>
+        <p>Admin Privileges</p>
         <p><a class="btn btn-secondary" href="technician/index.html" role="button">Log in</a></p>
       </div>
       <div class="col-md-4">
         <br>
 		<h2>BMO <br> Head</h2>
-        <p>Root Privelege</p>
+        <p>Root Priveleges</p>
         <p><a class="btn btn-secondary" href="head/index.html" role="button">Log in</a></p>
       </div>
     </div>
