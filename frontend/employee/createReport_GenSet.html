@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BMO employee</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://kit.fontawesome.com/a076d05399.js">
+		</script>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+			body {
+					font-family: 'Josefin Sans', sans-serif;
+					background-color: #fff;
+				}
+			.table{
+				display: table;
+				width: 60vw;
+			}
+			#row{
+				display: table-row;
+			}
+			#td{
+				display: table-cell;
+			}
+						
+			.wrapper {
+				transform: translateY(-7%);
+				}
+
+			.v ,.amp{
+				margin-right: 1vw;
+			}
+			label{
+				font-size: 2.5vh;
+				margin-right: 10vw;
+				margin-bottom: 2vh;
+			}
+			#task_info{
+				font-size: 5vh;
+				font-weight: bold;
+				margin-bottom: 5vh;
+			}
+			.volt_current #vLine_1_2, #vLine_2_3, #vLine_3_1, #cLine_1, #cLine_2, #cLine_3{
+				margin-right: 2vw;
+			}
+			
+			#issueField1, #issueField2{
+				display: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<div class="wrapper">
+		<input type="checkbox" id="check">
+		<label for="check">
+		<i class="fas fa-bars" id="btn"></i>
+		<i class="fas fa-times" id="cancel"></i>
+		</label>
+		<div class="sidebar">
+			<header>keoms</header>
+			<ul>
+				<li><a href="index.html"><i class="fas fa-paste"></i>Daily Reports</a></li>
+				<li><a href="pastReports.html"><i class="fas fa-history"></i>Past Reports</a></li>
+			</ul>
+			<div class="social_media">
+				<a href="#"><i class="fas fa-sign-out-alt"></i></a>
+				<a href="#"><i class="fas fa-users-cog"></i></a>
+				<a href="#"><i class="fas fa-cogs"></i></a>
+			</div>
+		</div>
+			<div class="main_content">
+				<div class="header">ASSIGN NEW TASK</div>  
+				<div class="info">
+					<p id="task_info">Generator set no-load testing</p>
+
+					<form>
+						<div class="table">
+							<div id="row">
+								<div id="td">
+									<label for="volt">Voltage</label>
+								</div>
+								<div id="td">
+									<input type="number" class="v" id="v1" name="Volt" placeholder="Line 1-2" required />
+									<input type="number" class="v" id="v2" name="Volt" placeholder="Line 2-3" required />
+									<input type="number" class="v" id="v3" name="Volt" placeholder="Line 3-1" required />
+								</div>
+							</div>
+							<div id="row">
+								<div id="td">
+									<label for="volt">Current</label>
+								</div>
+								<div id="td">
+									<input type="number" class="amp" id="amp1" name="Ampere" placeholder="Line 1" required />
+									<input type="number" class="amp" id="amp2" name="Ampere" placeholder="Line 2" required />
+									<input type="number" class="amp" id="amp3" name="Ampere" placeholder="Line 3" required />
+								</div>
+							</div>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Frequency</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" hz" id="hetz" name="hertz" placeholder="Frequency(hz)" required />
+								</div>
+							</div>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Battery Voltage</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" vdc" id="voltDC" name="voltDC" placeholder="Battery Voltage(vdc)" required />
+								</div>
+							</div>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Running Hours</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" hrs" id="hours" name="hours" placeholder="Running hours(h)" required />
+								</div>
+							</div>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Oil Pressure</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" psi" id="pressure" name="pressure" placeholder="Oil Pressure(psi)" required />
+								</div>
+							</div>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Oil Temperature</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" F" id="fahrenheit" name="fahrenheit" placeholder="Oil temp(F)" required />
+								</div>
+							</div>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Frequency of rotation</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" rpm" id="rev" name="rev" placeholder="Freq of rotation(rpm)" required />
+								</div>
+							</div>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Fuel level</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" L" id="liters" name="liters" placeholder="Fuel level(L)" required />
+								</div>
+							</div>
+						</div>
+						<div id="row">
+							<div id="td">
+								<input type="checkbox" name="issue1" id="issue1" value="true" onclick="issueFunction()">
+								<label for="issue1">Is there any abnormal sound produced during testing?</label>
+							</div>
+						</div>
+						<div id="issueField1">
+							<div id="td">
+								<label for="issueDesc1">Other remarks</label>
+								<br>
+								<input type="text" class="form-control" name="issueDesc1" id="issueDesc1" placeholder="Input remarks here">
+							</div>
+						</div>
+						<br>
+						<div id="row">
+							<div id="td">
+								<input type="checkbox" name="issue2" id="issue2" value="true" onclick="issueFunction()">
+								<label for="issue2">Are there any noticeable oil or gas leaks?</label>
+							</div>
+						</div>
+						<div id="issueField2">
+							<div id="td">
+								<label for="issueDesc2">Other remarks</label>
+								<br>
+								<input type="text" class="form-control" name="issueDesc2" id="issueDesc2" placeholder="Input remarks here">
+							</div>
+						</div>
+						<br>
+						<a href="index.html" class="btn btn-primary mb-2" role="button" aria-pressed="true">Submit</a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function issueFunction(){
+				var field1 = document.getElementById("issueField1");
+				var field2 = document.getElementById("issueField2");
+				if (document.getElementById("issue1").checked) {
+					field1.style.display = "table-row";
+				}else{
+					field1.style.display = "none";
+				}
+
+				if (document.getElementById("issue2").checked) {
+					field2.style.display = "table-row";
+				}else{
+					field2.style.display = "none";
+				}
+
+			}
+		</script>
+		
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</div>
+	
+	</body>
+	
+</html>
