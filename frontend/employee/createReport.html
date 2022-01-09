@@ -13,10 +13,6 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
-		
-		.wrapper {
-				transform: translateY(-7%);
-			}
 		</style>
 	</head>
 	<body>
@@ -38,24 +34,285 @@
 				<a href="#"><i class="fas fa-cogs"></i></a>
 			</div>
 		</div>
-			<div class="main_content">
-				<div class="header">ASSIGN NEW TASK</div>  
-				<div class="info">
-					
-					<form>
-						<div class="form-group">
-							<label for="formGroupExampleInput">Example label</label>
-							<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    <div class="main_content">
+        <div class="header">SUBMIT A REPORT</div>  
+        <div class="info">
+          <form class="p-3">
+          	<div class="row">
+	            <div class="col-6">
+	              <label for="name">Submitted by</label>
+	              <input type="text" class="form-control" id="name" placeholder="Name of Reporter">
+	            </div>
+	            <div class="col-6">
+	            	<label for="reportDate">Date of Report Creation</label>
+	                <input type="date" class="form-control w-100" id="reportDate">
+	            </div> 
+	        </div>
+	        <br>
+            <div class="form-group">
+              <label for="typeOfForm">Type of Report Form</label>
+              <select class="form-control" id="typeOfForm">
+                    <option value="no">None</option>
+                    <option value="genset">Generator Set</option>
+                    <option value="aircon">Aircon</option>
+              </select>
+            </div>
+            <!--GENSET FORM-->
+            <div class="form-group" id="gensetForm">
+            <p id="task_info">GENERATOR SET NO-LOAD TESTING FORM</p>
+					<div class="form-group">
+						<div class="table">
+							<div id="row">
+								<div id="td">
+									<label for="volt">Voltage</label>
+								</div>
+								<div id="td">
+									<input type="number" class="v" id="v1" name="Volt" placeholder="Line 1-2" required />
+									<input type="number" class="v" id="v2" name="Volt" placeholder="Line 2-3" required />
+									<input type="number" class="v" id="v3" name="Volt" placeholder="Line 3-1" required />
+								</div>
+							</div>
+							<br>
+							<div id="row">
+								<div id="td">
+									<label for="volt">Current</label>
+								</div>
+								<div id="td">
+									<input type="number" class="amp" id="amp1" name="Ampere" placeholder="Line 1" required />
+									<input type="number" class="amp" id="amp2" name="Ampere" placeholder="Line 2" required />
+									<input type="number" class="amp" id="amp3" name="Ampere" placeholder="Line 3" required />
+								</div>
+							</div>
+							<br>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Frequency</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" hz" id="hetz" name="hertz" placeholder="Frequency(hz)" required />
+								</div>
+							</div>
+							<br>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Battery Voltage</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" vdc" id="voltDC" name="voltDC" placeholder="Battery Voltage(vdc)" required />
+								</div>
+							</div>
+							<br>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Running Hours</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" hrs" id="hours" name="hours" placeholder="Running hours(h)" required />
+								</div>
+							</div>
+							<br>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Oil Pressure</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" psi" id="pressure" name="pressure" placeholder="Oil Pressure(psi)" required />
+								</div>
+							</div>
+							<br>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Oil Temperature</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" F" id="fahrenheit" name="fahrenheit" placeholder="Oil temp(F)" required />
+								</div>
+							</div>
+							<br>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Frequency of rotation</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" rpm" id="rev" name="rev" placeholder="Freq of rotation(rpm)" required />
+								</div>
+							</div>
+							<br>
+							<div id="row">
+								<div id="td">
+									<label for="hertz">Fuel level</label>
+								</div>
+								<div id="td">
+									<input type="number" class=" L" id="liters" name="liters" placeholder="Fuel level(L)" required />
+								</div>
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="formGroupExampleInput2">Another label</label>
-							<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+						<br>
+						<div id="row">
+							<div id="td">
+								<input type="checkbox" name="issue1" id="issue1" value="true" onclick="issueFunction()">
+								<label for="issue1">Is there any abnormal sound produced during testing?</label>
+							</div>
 						</div>
-						<a href="index.html" class="btn btn-primary mb-2" role="button" aria-pressed="true">Submit</a>
-					</form>
-				</div>
-			</div>
-		</div>
+						<br>
+						<div id="issueField1">
+							<div id="td">
+								<label for="issueDesc1">Other remarks</label>
+								<br>
+								<input type="text" class="form-control" name="issueDesc1" id="issueDesc1" placeholder="Input remarks here">
+							</div>
+						</div>
+						<br>
+						<div id="row">
+							<div id="td">
+								<input type="checkbox" name="issue2" id="issue2" value="true" onclick="issueFunction()">
+								<label for="issue2">Are there any noticeable oil or gas leaks?</label>
+							</div>
+						</div>
+						<div id="issueField2">
+							<div id="td">
+								<label for="issueDesc2">Other remarks</label>
+								<br>
+								<input type="text" class="form-control" name="issueDesc2" id="issueDesc2" placeholder="Input remarks here">
+							</div>
+						</div>
+						<br>
+					</div>
+            </div>
+             
+            <!--AIRCON FORM-->
+            <div class="form-group" id="airconForm">
+			<p id="task_info">AIRCON PREVENTIVE MAINTENANCE FORM</p>
+	            <div class="form-group">
+	              <label for="floor">Floor</label>
+	              <select class="form-control" id="floor">
+	                    <option value="">--</option>
+	                    <option value="1">Ground Floor</option>
+	                    <option value="2">2nd Floor</option>
+	                    <option value="3">3rd Floor</option>
+	                    <option value="4">4th Floor</option>
+	                    <option value="5">5th Floor</option>
+	                    <option value="6">6th Floor</option>
+	                    <option value="7">7th Floor</option>
+	                    <option value="8">8th Floor</option>
+	                    <option value="9">9th Floor</option>
+	                    <option value="10">10th Floor</option>
+	                    <option value="11">11th Floor</option>
+	                    <option value="12">12th Floor</option>
+	              </select>
+	            </div>
+	            <div class="row">
+	              <div class="col-6">
+	                <label for="roomNumber">Room Number</label>
+	                <input type="text" class="form-control w-100" id="roomNumber">
+	              </div>
+	              <div class="col-6">
+	                <label for="roomClassification">Room Classification</label>
+	                <input type="text" class="form-control w-100" id="roomClassification">
+	              </div>
+	            </div>
+	            <br>
+	            <div class="row">
+	              <div class="col-4">
+	                <label for="fcuNumber">FCU No.</label>
+	                <input type="number" class="form-control w-100" id="fcuNumber">
+	              </div>
+	              <div class="col-4">
+	                <label for="description">Description</label>
+		              <select class="form-control" id="floor">
+		                    <option value="">--</option>
+		                    <option value="1">1 is to 1</option>
+		                    <option value="2">2 in 1</option>
+		                    <option value="3">3 in 1</option>
+							<option value="4">Centralized</option>
+		              </select>
+	              </div>
+	              <div class="col-4">
+	                <label for="brand">Brand</label>
+	                <input type="text" class="form-control w-100" id="brand">
+	              </div>
+	            </div>
+	            <br>
+	            <div class="row">
+	              <div class="col-6">
+	                <label for="hpIndoor">Horse Power (HP) - INDOOR</label>
+	                <input type="number" class="form-control w-100" id="hpIndoor">
+	              </div>
+	              <div class="col-6">
+	                <label for="hpOutdoor">Horse Power (HP) - OUTDOOR</label>
+	                <input type="number" class="form-control w-100" id="hpOutdoor">
+	              </div>
+	            </div>
+	            <br>
+	            <div class="row">
+	              <div class="col-4">
+	                <label for="dateInstalled">Date Installed</label>
+	                <input type="date" class="form-control w-100" id="dateInstalled">
+	              </div>
+	              <div class="col-4">
+	                <label for="status">Status</label>
+		              <select class="form-control" id="status">
+		                    <option value="">--</option>
+		                    <option value="1">Old</option>
+		                    <option value="2">New</option>
+		              </select>
+	              </div>
+	              <div class="col-4">
+	                <label for="remarks">Remarks</label>
+		              <select class="form-control" id="remarks">
+		                    <option value="">--</option>
+		                    <option value="1">Casset Type</option>
+		                    <option value="2">Celling suspended</option>
+		                    <option value="3">Ceiling suspended Inverter</option>
+		                    <option value="4">Wall Mounted split</option>
+		                    <option value="5">Wall Mounted Multi split</option>
+		                    <option value="6">Floor Standing</option>
+		                    <option value="7">Centralized</option>
+		              </select>
+	              </div>
+	            </div>
+	            <br>
+	            <div class="row">
+	              <div class="col-6">
+	                <label for="history">History</label>
+	                <input type="text" class="form-control w-100" id="history">
+	              </div>
+	              <div class="col-6">
+	                <label for="dateClean">Date Clean</label>
+	                <input type="date" class="form-control w-100" id="dateClean">
+	              </div>
+	            </div>
+	            <br>
+	            <p>PREVENTIVE MAINTENANCE</p>
+	            <div class="row">
+	              <div class="col-4">
+	                <label for="indoorDate">Indoor/Date</label>
+	                <input type="date" class="form-control w-100" id="indoorDate">
+	              </div>
+	              <div class="col-4">
+	                <label for="outdoorDate">Outdoor/Date</label>
+	                <input type="date" class="form-control w-100" id="outdoorDate">
+	              </div>
+	              <div class="col-4">
+	                <label for="filterDate">Filter/Date</label>
+	                <input type="date" class="form-control w-100" id="filterDate">
+	              </div>
+	            </div>
+            </div>
+
+            <div class="form-group">
+              <label for="comments">Comments/Questions</label>
+              <textarea class="form-control" id="comments" rows="3" placeholder="Type your comments or questions here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+          <script src="formFields.js"></script>
+      </div>
+    </div>
+</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
