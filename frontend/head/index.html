@@ -16,7 +16,7 @@
 				margin:0;
 			}
 		.contnt{
-			background-color: blue;
+			/* background-color: blue; */
 			width: 100vw;
 			height: 10vh;
 			padding: 0 3vw;
@@ -25,7 +25,7 @@
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 		.cell, .cell_tasks, .cell_users{
-			border: 1px solid black;
+			/* border: 1px solid black; */
 			text-align: center;
 			background-color: #fff;
 			height: 30vh;
@@ -33,6 +33,18 @@
 		.cell_tasks{
 			grid-column-start: 1;
 			grid-column-end: 3;
+		}
+		.card {
+			/* box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
+			border:none;
+			padding: 20px;
+			height: 100%;
+		}
+		.card h1 {
+			font-size: 100px;
+		} 
+		.sidebar {
+			z-index: 1;
 		}
 		</style>
 	</head>
@@ -67,19 +79,44 @@
     </div>
     <div class="contnt">
     	<div class="cell">
-    		Finished Tasks
+    		<div class="card" style="background-color:#1bc5bd; color:white;">
+				<div class="media-body text-right">
+					<h1>#</h1>
+					<span>Finished Tasks</span>
+				</div>
+			</div>
     	</div>
     	<div class="cell">
-    		Active Issues
+    		<div class="card" style="background-color:#f64e60; color:white;">
+				<div class="media-body text-right">
+					<h1>#</h1>
+					<span>Active Issues</span>
+				</div>
+			</div>
     	</div>
     	<div class="cell">
-    		Active Tasks
+    		<div class="card" style="background-color:#ffa800; color:white;">
+				<div class="media-body text-right">
+					<h1>#</h1>
+					<span>Active Tasks</span>
+				</div>
+			</div>
     	</div>
     	<div class="cell_tasks">
-    		Remaining Tasks and Statuses
+    		<div class="card" style="background-color:#8950fc; color:white;">
+				<div class="media-body text-right">
+					<h1>#</h1>
+					<span>4th grid reserved</span>
+				</div>
+			</div>
     	</div>
     	<div class="cell_users">
-    		Users
+    		<div class="card" style="background-color:#7da1fd; color:white;">
+				<div class="media-body text-right">
+					<h1>#</h1>
+					<span>Users</span>
+				</div>
+			</div>
     	</div>
     </div>
 
