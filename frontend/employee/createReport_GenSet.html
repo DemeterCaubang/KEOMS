@@ -14,41 +14,19 @@
 					font-family: 'Josefin Sans', sans-serif;
 					background-color: #fff;
 				}
-			.table{
-				display: table;
-				width: 60vw;
-			}
-			#row{
-				display: table-row;
-			}
-			#td{
-				display: table-cell;
-			}
-						
-			.wrapper {
-				transform: translateY(-7%);
-				}
 
-			.v ,.amp{
-				margin-right: 1vw;
-			}
-			label{
-				font-size: 2.5vh;
-				margin-right: 10vw;
-				margin-bottom: 2vh;
-			}
-			#task_info{
-				font-size: 5vh;
-				font-weight: bold;
-				margin-bottom: 5vh;
-			}
-			.volt_current #vLine_1_2, #vLine_2_3, #vLine_3_1, #cLine_1, #cLine_2, #cLine_3{
-				margin-right: 2vw;
-			}
 			
-			#issueField1, #issueField2{
-				display: none;
-			}
+			.wrapper{
+					transform: translateY(-2%);
+					height: 100%;
+				}
+				
+			.wrapper .sidebar {
+					height: 100%;
+				}
+			#task_info{
+			font-size:1.7vw;
+		}
 			
 		</style>
 	</head>
@@ -66,107 +44,113 @@
 				<li><a href="pastReports.html"><i class="fas fa-history"></i>Past Reports</a></li>
 			</ul>
 			<div class="social_media">
-				<a href="#"><i class="fas fa-sign-out-alt"></i></a>
+				<a href="../../index.html"><i class="fas fa-sign-out-alt"></i></a>
 				<a href="#"><i class="fas fa-users-cog"></i></a>
 				<a href="#"><i class="fas fa-cogs"></i></a>
 			</div>
 		</div>
-			<div class="main_content">
-				<div class="header">ASSIGN NEW TASK</div>  
-				<div class="info">
-					<p id="task_info">Generator set no-load testing</p>
-
-					<form>
+		<div class="main_content">
+			<div class="header">SUBMIT A REPORT</div>  
+        <div class="info">
+          <form class="p-3">
+          	<!--
+			<div class="row">
+	            <div class="col-6">
+	              <label for="name">Submitted by</label>
+	              <input type="text" class="form-control" id="name" placeholder="Name of Reporter">
+	            </div>
+	            <div class="col-6">
+	            	<label for="reportDate">Date of Report Creation</label>
+	                <input type="date" class="form-control w-100" id="reportDate">
+	            </div> 
+	        </div>
+			-->
+			
+	        <br>
+            <!--GENSET FORM-->
+            <div class="form-group" id="gensetForm">
+            <p id="task_info">GENERATOR SET NO-LOAD TESTING FORM</p><br>
+					<div class="form-group">
 						<div class="table">
 							<div id="row">
-								<div id="td">
+								<div id="col-5">
 									<label for="volt">Voltage</label>
-								</div>
-								<div id="td">
 									<input type="number" class="v" id="v1" name="Volt" placeholder="Line 1-2" required />
 									<input type="number" class="v" id="v2" name="Volt" placeholder="Line 2-3" required />
 									<input type="number" class="v" id="v3" name="Volt" placeholder="Line 3-1" required />
 								</div>
 							</div>
+							<br>
 							<div id="row">
-								<div id="td">
+								<div id="col-5">
 									<label for="volt">Current</label>
-								</div>
-								<div id="td">
 									<input type="number" class="amp" id="amp1" name="Ampere" placeholder="Line 1" required />
 									<input type="number" class="amp" id="amp2" name="Ampere" placeholder="Line 2" required />
 									<input type="number" class="amp" id="amp3" name="Ampere" placeholder="Line 3" required />
 								</div>
 							</div>
+							<br>
 							<div id="row">
-								<div id="td">
+								<div id="col-3">
 									<label for="hertz">Frequency</label>
-								</div>
-								<div id="td">
 									<input type="number" class=" hz" id="hetz" name="hertz" placeholder="Frequency(hz)" required />
 								</div>
 							</div>
+							<br>
 							<div id="row">
-								<div id="td">
+								<div id="col-3">
 									<label for="hertz">Battery Voltage</label>
-								</div>
-								<div id="td">
 									<input type="number" class=" vdc" id="voltDC" name="voltDC" placeholder="Battery Voltage(vdc)" required />
 								</div>
 							</div>
+							<br>
 							<div id="row">
-								<div id="td">
+								<div id="col-3">
 									<label for="hertz">Running Hours</label>
-								</div>
-								<div id="td">
 									<input type="number" class=" hrs" id="hours" name="hours" placeholder="Running hours(h)" required />
 								</div>
 							</div>
+							<br>
 							<div id="row">
-								<div id="td">
+								<div id="col-3">
 									<label for="hertz">Oil Pressure</label>
-								</div>
-								<div id="td">
 									<input type="number" class=" psi" id="pressure" name="pressure" placeholder="Oil Pressure(psi)" required />
 								</div>
 							</div>
+							<br>
 							<div id="row">
-								<div id="td">
+								<div id="col-3">
 									<label for="hertz">Oil Temperature</label>
-								</div>
-								<div id="td">
 									<input type="number" class=" F" id="fahrenheit" name="fahrenheit" placeholder="Oil temp(F)" required />
 								</div>
 							</div>
+							<br>
 							<div id="row">
-								<div id="td">
+								<div id="col-3">
 									<label for="hertz">Frequency of rotation</label>
-								</div>
-								<div id="td">
 									<input type="number" class=" rpm" id="rev" name="rev" placeholder="Freq of rotation(rpm)" required />
 								</div>
 							</div>
+							<br>
 							<div id="row">
-								<div id="td">
+								<div id="col-3">
 									<label for="hertz">Fuel level</label>
-								</div>
-								<div id="td">
 									<input type="number" class=" L" id="liters" name="liters" placeholder="Fuel level(L)" required />
 								</div>
 							</div>
 						</div>
+						<br>
 						<div id="row">
 							<div id="td">
 								<input type="checkbox" name="issue1" id="issue1" value="true" onclick="issueFunction()">
 								<label for="issue1">Is there any abnormal sound produced during testing?</label>
 							</div>
 						</div>
-						<div id="issueField1">
-							<div id="td">
+						<div id="issueField1" style="display:none;">
+	
 								<label for="issueDesc1">Other remarks</label>
-								<br>
-								<input type="text" class="form-control" name="issueDesc1" id="issueDesc1" placeholder="Input remarks here">
-							</div>
+								<textarea rows="3" class="form-control" id="issueDesc1" placeholder="Additional remarks here" style="width: 40vw;" ></textarea>
+
 						</div>
 						<br>
 						<div id="row">
@@ -175,18 +159,22 @@
 								<label for="issue2">Are there any noticeable oil or gas leaks?</label>
 							</div>
 						</div>
-						<div id="issueField2">
-							<div id="td">
+						<div id="issueField2" style="display:none;">
+
 								<label for="issueDesc2">Other remarks</label>
-								<br>
-								<input type="text" class="form-control" name="issueDesc2" id="issueDesc2" placeholder="Input remarks here">
-							</div>
+								<textarea rows="3" class="form-control" id="issueDesc2" placeholder="Additional remarks here" style="width: 40vw;"></textarea>
+
 						</div>
 						<br>
-						<a href="index.html" class="btn btn-primary mb-2" role="button" aria-pressed="true">Submit</a>
-					</form>
+					</div>
 				</div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+			<br><br><br><br><br><br><br>
+          </form>
+				</form>
 			</div>
+		</div>
+		
 		</div>
 		<script type="text/javascript">
 			function issueFunction(){
