@@ -114,7 +114,7 @@ label #cancel {
 }
 
 #check:checked ~ .main_content {
-	padding-left: 200px;
+	padding-left: 13vw;
 }
 
 #check:checked ~ label #btn {
@@ -159,9 +159,11 @@ label #cancel {
 }
 
 .wrapper .main_content .info{
-	padding: 25px 25px 25px 70px;
+	padding: 25px 25px 25px 25px;
 	color: #000;
 	line-height: 25px;
 }
+
+
 
 /*original reference: https://www.youtube.com/watch?v=YesSVqjcDts */

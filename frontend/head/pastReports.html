@@ -16,6 +16,13 @@
 		.wrapper {
 			transform: translateY(-6%);
 		}
+		tr[data-href]{
+			cursor: pointer;
+			transition: background-color 500ms ease-out 100ms;
+		}
+		tr[data-href]:hover{
+			background-color:#e5e5e5;
+		}
 		</style>
 	</head>
 	<body>
@@ -55,29 +62,60 @@
 						<thead>
 							<tr>
 								<th>#</th>
-								<th>Table heading</th>
-								<th>Table heading</th>
-								<th>Table heading</th>
+								<th>Task</th>
+								<th>Machine</th>
+								<th>Floor</th>
+								<th>Room Number</th>
+								<th>Date Submitted</th>
+								<th>Issue/For repair</th>
+								<th>Issue Status</th>
+								<th>Submitted by</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr data-href="createReport_aircon(no_issue).html">
 								<th scope="row">1</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
+								<td>General Cleaning Aircon</td>
+								<td>Aircon</td>
+								<td>7th floor</td>
+								<td>700-A</td>
+								<td>September 13, 2021</td>
+								<td>No</td>
+								<td>--</td>
+								<td> Christian Paul Duria</td>
 							</tr>
-							<tr>
+							<tr data-href="createReport_aircon(yes_issue).html">
 								<th scope="row">2</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
+								<td>Check Aircon</td>
+								<td>Air con</td>
+								<td>8th floor</td>
+								<td>802</td>
+								<td>September 20, 2021</td>
+								<td>Yes</td>
+								<td>Not Done</td>
+								<td> Trisha Tolentino</td>
 							</tr>
-							<tr>
+							<tr data-href="createReport_GenSet.html">
 								<th scope="row">3</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
+								<td>Generator Set no-load testing</td>
+								<td>Generator Set II</td>
+								<td>Basement 2</td>
+								<td>--</td>
+								<td>April 29, 2021</td>
+								<td>No</td>
+								<td>--</td>
+								<td>Demeter Renee Caubang</td>
+							</tr>
+							<tr data-href="createReport_aircon(done_issue).html">
+								<th scope="row">4</th>
+								<td>Check A/C</td>
+								<td>Aircon</td>
+								<td>9th floor</td>
+								<td>904-B</td>
+								<td>September 29, 2021</td>
+								<td>Yes</td>
+								<td>Done</td>
+								<td>Jan Laurene Manrique</td>
 							</tr>
 						</tbody>
 					</table>
@@ -87,5 +125,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () =>{
+			const rows = document.querySelectorAll("tr[data-href]");
+			
+			rows.forEach(row => {
+				row.addEventListener("click", ()=>{
+					window.location.href = row.dataset.href;
+				});
+			});
+		});
+	</script>
 	</body>
 </html>
