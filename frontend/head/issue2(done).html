@@ -14,14 +14,16 @@
 				background-color: #fff;
 			}
 		.wrapper {
-			transform: translateY(-5%);
+			transform: translateY(-7%);
 		}
-		tr[data-href]{
-			cursor: pointer;
-			transition: background-color 500ms ease-out 100ms;
+		.issue_desc{
+			padding: 0px 20px 20px 20px;
 		}
-		tr[data-href]:hover{
-			background-color:#e5e5e5;
+		
+		#task_info{
+			font-size: 1.7vw;
+			padding: 20px 20px 0px 20px;
+			font-weight: bold;
 		}
 		</style>
 	</head>
@@ -49,70 +51,56 @@
         </div> 
     </div>
 	<div class="main_content">
-		<div class="header">ISSUE LOGS</div>  
-				<div class="info">
-					<a href="createIssue.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">CREATE ISSUE</a>
-					<br><br/>
-					<div class="input-group rounded">
-						<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-							aria-describedby="search-addon" />
-						<span class="input-group-text border-0" id="search-addon">
-						<i class="fas fa-search"></i></span>
-					</div>
-					<br>
-					<table class="table table-reflow">
-						<thead>
-							<tr>
-								<th>Issue ID</th>
-								<th>Task ID</th>
-								<th>Contracted Company</th>
-								<th>Company representative</th>
-								<th>Date created</th>
-								<th>Status</th>
-								<th>Date resolved</th>
-								<th>Resolved by</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr data-href="issue1(not_done).html">
-								<th scope="row">1</th>
-								<td>2</td>
-								<td>--</td>
-								<td>--</td>
-								<td>September 20, 2021</td>
-								<td>Unresolved</td>
-								<td>--</td>
-								<td>Trisha Tolentino</td>
-							</tr>
-							<tr data-href="issue2(done).html">
-								<th scope="row">2</th>
-								<td>4</td>
-								<td>Credited Aircon Repair Company</td>
-								<td>Jasffer Padigdig</td>
-								<td>September 29, 2021</td>
-								<td>Resolved</td>
-								<td>October 14, 2021</td>
-								<td>Jan Laurene Manrique</td>
-							</tr>
-
-						</tbody>
-					</table>
+		<div class="header">ISSUE LOGS</div>
+		<p id="task_info">TASK #2 - CHECK A/C</p>
+		
+		
+        <div class="info">
+		<div class="issue_desc">
+			September 29, 2021 3:25pm<br>
+			<i>Issue description:</i><br>
+			"4th Faculty pantry defective"
+		</div>
+			<form class="p-3">
+				<div class="form-group">
+				<div class="form-group">
+					<label for="issue_Recommendation">Recommendation</label>
+					<textarea rows="3" class="form-control" id="issueDesc2" placeholder="Contact ABC company for part replacement" style="width: 40vw;" disabled></textarea>
 				</div>
-			</div>
+				
+
+				<div class="row">
+					<div class="col-4">
+						<label for="formGroupExampleInput2">Endorsed by</label>
+						<input type="text" class="form-control w-100" id="formGroupExampleInput2" placeholder="Asia Pacific College" disabled>
+						
+					</div>
+					<div class="col-4">
+						<label for="formGroupExampleInput2">Date endorsed for repair</label>
+						<input type="date" class="form-control w-100" id="formGroupExampleInput2" value="2021-10-21" disabled>
+					</div>
+				</div>
+					
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">Contracted company</label>
+					<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Credible Aircon company" style="width: 40vw;" disabled>
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">Company Representative</label>
+					<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Jason Dela Cruz" style="width: 40vw;" disabled>
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">Service Report number</label>
+					<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="9273-A" style="width: 40vw;" disabled>
+				</div>
+				<a href="issueLogs.html" class="btn btn-primary mb-2" role="button" aria-pressed="true">Reopen issue</a>
+			</form>
+		</div>
+    </div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
-	<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", () =>{
-			const rows = document.querySelectorAll("tr[data-href]");
-			
-			rows.forEach(row => {
-				row.addEventListener("click", ()=>{
-					window.location.href = row.dataset.href;
-				});
-			});
-		});
-	</script>
 	</body>
 </html>
