@@ -121,123 +121,85 @@
     		<div class="card" style="background-color:#8950fc; color:white; text-align: left;">
 					<div class="card-body">
 
-						<!--TASKS DONE TODAY -->
+						<!--TASKS DONE FOR THE MONTH -->
 						<div>
-							<h3>TASKS DONE TODAY</h3>
+							<h2>TASKS DONE FOR THE MONTH</h2>
 							<span><a href="pastReports.html" class="btn btn-success" role="button" aria-pressed="true">Go to Past reports</a></span>
-							<table class="table table-reflow">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>Task</th>
-								<th>Machine</th>
-								<th>Floor</th>
-								<th>Room Number</th>
-								<th>Date Submitted</th>
-								<th>Issue/For repair</th>
-								<th>Issue Status</th>
-								<th>Submitted by</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr data-href="createReport_aircon(no_issue).html">
-								<th scope="row">1</th>
-								<td>General Cleaning Aircon</td>
-								<td>Aircon</td>
-								<td>7th floor</td>
-								<td>700-A</td>
-								<td>September 13, 2021</td>
-								<td>No</td>
-								<td>--</td>
-								<td> Christian Paul Duria</td>
-							</tr>
-							<tr data-href="createReport_aircon(done_issue).html">
-								<th scope="row">2</th>
-								<td>Check A/C</td>
-								<td>Aircon</td>
-								<td>9th floor</td>
-								<td>904-B</td>
-								<td>September 29, 2021</td>
-								<td>Yes</td>
-								<td>Done</td>
-								<td>Jan Laurene Manrique</td>
-							</tr>
-						</tbody>
-					</table>
-						</div>
-						<br>
-						<!--PENDING TASKS -->
-						<div>
-							<h3>PENDING TASKS</h3>
-							<a href="createTask.html" class="btn btn-success" role="button" aria-pressed="true">Assign a task</a>
-									<table class="table table-borderless">
-														<thead>
-															<tr>
-																<th>#</th>
-																<th>Task</th>
-																<th>Date assigned</th>
-																<th>Machine</th>
-																<th>Floor</th>
-																<th>Room number</th>
-																<th>Assigned to</th>
-															</tr>
-														</thead>
-															<tbody>
-																<tr href="createReport.html">
-																	<th scope="row">1</th>
-																	<td>Check Overheating A/C</td>
-																	<td>September 16, 2021</td>
-																	<td>Air Conditioner</td>
-																	<td>6th floor</td>
-																	<td>606</td>
-																	<td>Jasffer Padigdig</td>
-																</tr>
-																<tr href="createReport_GenSet.html">
-																	<th scope="row">2</th>
-																	<td>Generator set-no load testing</td>
-																	<td>April 29, 2021</td>
-																	<td>Generator-set 2</td>
-																	<td>Basement level 2</td>
-																	<td>--</td>
-																	<td>Demeter Caubang</td>
-																</tr>
-															</tbody>
-													</table>
-						</div>
-						<br>
-						<!--TASKS WITH ISSUES -->
-						<div>
-							<h3>TASKS WITH ISSUES FOUND</h3>
-							<a href="issueLogs.html" class="btn btn-success" role="button" aria-pressed="true">Go to Issue logs</a>
-							<table class="table table-reflow">
+							<br><br>
+							<table class="table table-dark">
 								<thead>
 									<tr>
-										<th>#</th>
+										<th>ID</th>
 										<th>Task</th>
 										<th>Machine</th>
 										<th>Floor</th>
 										<th>Room Number</th>
+										<th>Assigned to</th>
+										<th>Date Created</th>
 										<th>Date Submitted</th>
-										<th>Issue/For repair</th>
-										<th>Issue Status</th>
-										<th>Submitted by</th>
+										<th>Status</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr data-href="createReport_aircon(yes_issue).html">
+									<tr data-href="createReport_aircon(no_issue).html">
 										<th scope="row">1</th>
+										<td>General Cleaning Aircon</td>
+										<td>Aircon</td>
+										<td>7th floor</td>
+										<td>700-A</td>
+										<td> Christian Paul Duria</td>
+										<td>September 13, 2021</td>
+										<td>September 13, 2021</td>
+										<td><p class="text-warning">Pending</p></td>
+									</tr>
+									<tr data-href="createReport_aircon(done_issue).html">
+										<th scope="row">2</th>
+										<td>Check A/C</td>
+										<td>Aircon</td>
+										<td>9th floor</td>
+										<td>904-B</td>
+										<td>Jan Laurene Manrique</td>
+										<td>September 29, 2021</td>
+										<td>September 29, 2021</td>
+										<td><p class="text-success">Done</p></td>
+									</tr>
+									<tr data-href="createReport_aircon(yes_issue).html">
+										<th scope="row">3</th>
 										<td>Check Aircon</td>
 										<td>Air con</td>
 										<td>8th floor</td>
 										<td>802</td>
-										<td>September 20, 2021</td>
-										<td>Yes</td>
-										<td>Not Done</td>
 										<td> Trisha Tolentino</td>
+										<td>September 20, 2021</td>
+										<td>September 20, 2021</td>
+										<td><p class="text-danger">Done (with issues)</p></td>
+									</tr>
+									<tr data-href="createReport_GenSet.html">
+										<th scope="row">4</th>
+										<td>Generator Set no-load testing</td>
+										<td>Generator Set II</td>
+										<td>Basement 2</td>
+										<td>--</td>
+										<td>Demeter Renee Caubang</td>
+										<td>September 29, 2021</td>
+										<td>September 29, 2021</td>
+										<td><p class="text-danger">Done (with issues)</p></td>
+									</tr>
+									<tr data-href="createReport_GenSet.html">
+										<th scope="row">5</th>
+										<td>Check overheating A/C</td>
+										<td>Air Conditioner</td>
+										<td>6th floor</td>
+										<td>606</td>
+										<td>Jasffer padigdig</td>
+										<td>September 16, 2021</td>
+										<td>September 16, 2021</td>
+										<td><p class="text-warning">Pending</p></td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
+						<br>
 						
 				</div>
 			</div>
