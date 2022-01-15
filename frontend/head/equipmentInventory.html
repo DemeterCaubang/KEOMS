@@ -13,8 +13,12 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
-		.wrapper {
-			transform: translateY(-5%);
+		tr[data-href]{
+			cursor: pointer;
+			transition: background-color 500ms ease-out 100ms;
+		}
+		tr[data-href]:hover{
+			background-color:#e5e5e5;
 		}
 		</style>
 	</head>
@@ -56,30 +60,56 @@
 					<table class="table table-reflow">
 						<thead>
 							<tr>
-								<th>#</th>
-								<th>Table heading</th>
-								<th>Table heading</th>
-								<th>Table heading</th>
+								<th>ID</th>
+								<th>Machine</th>
+								<th>Asset</th>
+								<th>Floor</th>
+								<th>Room Number</th>
+								<th>Date Installed</th>
+								<th>Date Last Used</th>
+								<th>Condition</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr data-href="#">
 								<th scope="row">1</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
+								<td>Aircon</td>
+								<td>HVAC</td>
+								<td>7th floor</td>
+								<td>700-A</td>
+								<td>September 19, 2016</td>
+								<td>September 13, 2021</td>
+								<td>OK</td>
 							</tr>
-							<tr>
+							<tr data-href="#">
 								<th scope="row">2</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
+								<td>Aircon</td>
+								<td>HVAC</td>
+								<td>6th floor</td>
+								<td>609-C</td>
+								<td>September 19, 2016</td>
+								<td>September 13, 2021</td>
+								<td>OK</td>
 							</tr>
-							<tr>
+							<tr data-href="#">
 								<th scope="row">3</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
+								<td>Generator Set I</td>
+								<td>Generator Set</td>
+								<td>Basement 2</td>
+								<td>--</td>
+								<td>2001</td>
+								<td>April 29, 2021</td>
+								<td>Not Good</td>
+							</tr>
+							<tr data-href="#">
+								<th scope="row">4</th>
+								<td>Generator Set II</td>
+								<td>Generator Set</td>
+								<td>Basement 2</td>
+								<td>--</td>
+								<td>2001</td>
+								<td>April 29, 2021</td>
+								<td>OK</td>
 							</tr>
 						</tbody>
 					</table>
@@ -89,5 +119,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () =>{
+			const rows = document.querySelectorAll("tr[data-href]");
+			
+			rows.forEach(row => {
+				row.addEventListener("click", ()=>{
+					window.location.href = row.dataset.href;
+				});
+			});
+		});
+	</script>
 	</body>
 </html>
