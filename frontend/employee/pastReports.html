@@ -13,6 +13,13 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
+		tr[data-href]{
+			cursor: pointer;
+			transition: background-color 500ms ease-out 100ms;
+		}
+		tr[data-href]:hover{
+			background-color:#e5e5e5;
+		}
 		</style>
 	</head>
 	<body>
@@ -28,14 +35,14 @@
 				<li><a href="index.html"><i class="fas fa-paste"></i>Daily Reports</a></li>
 				<li><a href="pastReports.html"><i class="fas fa-history"></i>Past Reports</a></li>
 			</ul>
-			<div class="social_media">
-				<a href="../../index.html"><i class="fas fa-sign-out-alt"></i></a>
-				<a href="#"><i class="fas fa-users-cog"></i></a>
-				<a href="#"><i class="fas fa-cogs"></i></a>
-			</div>
-		</div>
-			<div class="main_content">
-				<div class="header">PAST REPORTS</div>  
+        <div class="social_media">
+          <a href="../../index.html"><i class="fas fa-sign-out-alt"></i></a>
+          <a href="#"><i class="fas fa-users-cog"></i></a>
+          <a href="#"><i class="fas fa-cogs"></i></a>
+        </div> 
+    </div>
+	<div class="main_content">
+		<div class="header">PAST REPORTS</div>  
 				<div class="info">
 					<div class="input-group rounded">
 						<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
@@ -47,39 +54,56 @@
 					<table class="table table-reflow">
 						<thead>
 							<tr>
-								<th>#</th>
-								<th>Table heading</th>
-								<th>Table heading</th>
-								<th>Table heading</th>
+								<th>ID</th>
+								<th>Machine</th>
+								<th>Floor</th>
+								<th>Room Number</th>
+								<th>Task</th>
+								<th>Date Submitted</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr data-href="pastReports_aircon1.html">
 								<th scope="row">1</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
-							</tr>
-							<tr>
+								<td>Aircon</td>
+								<td>7th floor</td>
+								<td>700-A</td>
+								<td>General Cleaning Aircon</td>
+								<td>September 13, 2021</td>
+							<tr data-href="pastReports_aircon2.html">
 								<th scope="row">2</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
+								<td>Aircon</td>
+								<td>8th floor</td>
+								<td>802</td>
+								<td>Check Aircon</td>
+								<td>September 20, 2021</td>
 							</tr>
-							<tr>
+							<tr data-href="pastReports_genset.html">
 								<th scope="row">3</th>
-								<td>Table cell</td>
-								<td>Table cell</td>
-								<td>Table cell</td>
+								<td>Generator Set II</td>
+								<td>Basement 2</td>
+								<td>--</td>
+								<td>Generator Set no-load testing</td>
+								<td>April 29, 2021</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
-		</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () =>{
+			const rows = document.querySelectorAll("tr[data-href]");
+			
+			rows.forEach(row => {
+				row.addEventListener("click", ()=>{
+					window.location.href = row.dataset.href;
+				});
+			});
+		});
+	</script>
 	</body>
 </html>
