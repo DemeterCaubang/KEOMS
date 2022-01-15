@@ -13,6 +13,9 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
+		#task_info{
+			font-size:1.7vw;
+		}
 		</style>
 	</head>
 	<body>
@@ -37,47 +40,53 @@
           <a href="#"><i class="fas fa-users-cog"></i></a>
           <a href="#"><i class="fas fa-cogs"></i></a>
         </div> 
-    </div>
+		</div>
     <div class="main_content">
-        <div class="header">USERS</div>  
-				<div class="info">
-					<table class="table table-reflow">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Role</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>Info</td>
-								<td>Info</td>
-								<td>Info</td>
-								<td><a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Change Role</a></td>
-							</tr>
-							<tr>
-								<th scope="row">1</th>
-								<td>Info</td>
-								<td>Info</td>
-								<td>Info</td>
-								<td><a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Change Role</a></td>
-							</tr>
-							<tr>
-								<th scope="row">1</th>
-								<td>Info</td>
-								<td>Info</td>
-								<td>Info</td>
-								<td><a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Change Role</a></td>
-							</tr>
-						</tbody>
-					</table>
+        <div class="header">EQUIPMENT INVENTORY</div>  
+        <div class="info">
+          <form class="p-3">
+            <div class="form-group">
+			  <p>Equipment ID: 3</p><br>
+              <label for="typeOfForm">Type of Report Form</label>
+              <select class="form-control" id="typeOfForm" disabled>
+                    <option value="no">None</option>
+                    <option value="genset" selected>Generator Set</option>
+                    <option value="aircon">Aircon</option>
+              </select>
+            </div>
+            <div id="form-group">
+				<div class="row">
+					<div class="col-4">
+						<label for="volt">Volt</label>
+						<input type="number" id="volt" class="form-control w-100" placeholder="7" disabled/>
+					</div>
+					<div class="col-4">
+						<label for="pressure">Pressure</label>
+						<input type="number" id="pressure" class="form-control w-100" placeholder="150" disabled/>
+					</div>
+					<div class="col-4">
+						<label for="temp">Temperature</label>
+						<input type="number" id="temp" class="form-control w-100" placeholder="21" disabled/>
+					</div>
 				</div>
+					<br>
+					<input type="checkbox" id="issue" checked disabled/>
+					<label for="temp">Machine issues/For repair</label>
+					<label for="issue_comments" id="issues" >Machine issues</label>
+					<textarea class="form-control" id="issue_comments" rows="3" placeholder="4th Faculty pantry defective"  disabled></textarea>
+				</div>
+				<div>
+					<br>
+              		<label for="comments">Other remarks</label>
+              		<textarea class="form-control" id="comments" rows="3" placeholder="309A, 201A, 203B, 209A, not cooling" disabled></textarea>
+            	</div>
 			</div>
-	</div>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+      </div>
+    </div>
+</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
