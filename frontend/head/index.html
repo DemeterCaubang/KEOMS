@@ -229,42 +229,42 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr data-href="createReport_aircon(no_issue).html">
+										<tr data-href="">
 											<th scope="row">1</th>
 											<td>Christian Paul Duria</td>
 											<td>3</td>
 										</tr>
-										<tr data-href="createReport_aircon(done_issue).html">
+										<tr data-href="">
 											<th scope="row">2</th>
 											<td>Demeter Caubang</td>
 											<td>5</td>
 										</tr>
-										<tr data-href="createReport_aircon(yes_issue).html">
+										<tr data-href="">
 											<th scope="row">3</th>
 											<td>Janna Manrique</td>
 											<td>2</td>
 										</tr>
-										<tr data-href="createReport_GenSet.html">
+										<tr data-href="">
 											<th scope="row">4</th>
 											<td>Jasffer Padigdig</td>
 											<td>1</td>
 										</tr>
-										<tr data-href="createReport_GenSet.html">
+										<tr data-href="">
 											<th scope="row">5</th>
 											<td>Trisha Tolentino</td>
 											<td>3</td>
 										</tr>
-										<tr data-href="createReport_GenSet.html">
+										<tr data-href="">
 											<th scope="row">6</th>
 											<td>Kristine Garcia</td>
 											<td>7</td>
 										</tr>
-										<tr data-href="createReport_GenSet.html">
+										<tr data-href="">
 											<th scope="row">7</th>
 											<td>Marco Reyes</td>
 											<td>5</td>
 										</tr>
-										<tr data-href="createReport_GenSet.html">
+										<tr data-href="">
 											<th scope="row">8</th>
 											<td>Juan dela Cruz</td>
 											<td>4</td>
@@ -283,6 +283,16 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
 	<script type="text/javascript" src="../assets/js/keen-analytics.js"></script>
-	
+		<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () =>{
+			const rows = document.querySelectorAll("tr[data-href]");
+			
+			rows.forEach(row => {
+				row.addEventListener("click", ()=>{
+					window.location.href = row.dataset.href;
+				});
+			});
+		});
+	</script>
 	</body>
 </html>
