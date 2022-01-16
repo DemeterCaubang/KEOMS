@@ -13,6 +13,18 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
+		
+		/*icons disappearing fix*/
+		i.fa {
+			-webkit-animation: show 1s 1;
+				/* any other properties to override from FontAwesome's default .fa rule */
+			}
+		@-webkit-keyframes show {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
+			}
+		/* thank you T.T https://stackoverflow.com/questions/21218359/why-are-my-font-awesome-icons-disappearing-on-page-loading */
+		
 		</style>
 	</head>
 	<body>
