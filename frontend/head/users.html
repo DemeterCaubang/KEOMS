@@ -40,7 +40,7 @@ button:hover {
 }
 
 .updatebtn {
-  background-color: ##358B49;
+  background-color: #358B49;
 }
 
 .container {
@@ -146,7 +146,7 @@ hr {
 								<td>Caubang</td>
 								<td>dpcaubang</td>
 								<td>dpcaubang@student.apc.edu.ph</td>
-								<td>Normal User</td>
+								<td id="user01">Normal User</td>
 								<td><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-success btn-lg active">Change Role</button></td>
 							</tr>
 							<tr>
@@ -155,8 +155,8 @@ hr {
 								<td>Manrique</td>
 								<td>jlmanrique</td>
 								<td>jlmanrique@student.apc.edu.ph</td>
-								<td>Normal User</td>
-								<td><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-success btn-lg active">Change Role</button></td>
+								<td id="user02">Normal User</td>
+								<td><button onclick="document.getElementById('id02').style.display='block'" class="btn btn-success btn-lg active">Change Role</button></td>
 							</tr>
 							<tr>
 								<th scope="row">2018-123456</th>
@@ -164,8 +164,8 @@ hr {
 								<td>Tolentino</td>
 								<td>tatolentino</td>
 								<td>tatolentino@student.apc.edu.ph</td>
-								<td>Normal User</td>
-								<td><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-success btn-lg active">Change Role</button></td>
+								<td id="user03">Normal User</td>
+								<td><button onclick="document.getElementById('id03').style.display='block'" class="btn btn-success btn-lg active">Change Role</button></td>
 							</tr>
 						</tbody>
 					</table>
@@ -180,13 +180,44 @@ hr {
       <h1>Change Role</h1>
       <p>Are you sure you want to change this user's role?</p>
     
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="updatebtn">Update</button>
+      <div class="clearfix1">
+        <button type="button" onclick="changeUser01Role()" class="updatebtn">Update</button>
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       </div>
     </div>
   </form>
 </div>
+
+<div id="id02" class="modal">
+	<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+	<form class="modal-content" action="#">
+	  <div class="container">
+		<h1>Change Role</h1>
+		<p>Are you sure you want to change this user's role?</p>
+	  
+		<div class="clearfix2">
+		  <button type="button" onclick="changeUser02Role()" class="updatebtn">Update</button>
+		  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>
+	  </div>
+	</form>
+  </div>
+
+<div id="id03" class="modal">
+	<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">×</span>
+	<form class="modal-content" action="#">
+	  <div class="container">
+		<h1>Change Role</h1>
+		<p>Are you sure you want to change this user's role?</p>
+	  
+		<div class="clearfix3">
+		  <button type="button" onclick="changeUser03Role()" class="updatebtn">Update</button>
+		  <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>
+	  </div>
+	</form>
+  </div>
+
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -194,7 +225,8 @@ hr {
 	<script type="text/javascript">
 	</script>
 	<script>
-		// Get the modal
+
+// Get the modal
 var modal = document.getElementById('id01');
 
 // Allows user to close modal by clicking anywhere outside the modal
@@ -203,6 +235,23 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// Changes "Normal User" text to "Adimn User"
+function changeUser01Role() {
+	document.getElementById('id01').style.display='none';
+		document.getElementById("user01").innerHTML = "Admin User";
+}
+
+function changeUser02Role() {
+	document.getElementById('id02').style.display='none';
+		document.getElementById("user02").innerHTML = "Admin User";
+}
+
+function changeUser03Role() {
+	document.getElementById('id03').style.display='none';
+		document.getElementById("user03").innerHTML = "Admin User";
+}
+
 </script>
 	</div>
 	</body>
