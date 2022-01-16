@@ -118,7 +118,7 @@ label #cancel {
 }
 
 #check:checked ~ .main_content {
-	padding-left: 18vw;
+	padding-left: 13vw;
 }
 
 #check:checked ~ label #btn {
@@ -169,5 +169,31 @@ label #cancel {
 }
 
 
+#machine_table{
+	width: 50vw;
+}
+
+#task_info, #machine_desc{
+	font-weight: bold;
+}
+
+tr[data-href]{
+			cursor: pointer;
+			transition: background-color 500ms ease-out 100ms;
+}
+tr[data-href]:hover{
+	background-color:#e5e5e5;
+}
+
+a{
+	color: #1d2124;
+	text-decoration:none;
+	transition: text-decoration 500ms ease-out 100ms;
+}
+
+a:hover{
+
+	text-decoration:underline;
+}
 
 /*original reference: https://www.youtube.com/watch?v=YesSVqjcDts */

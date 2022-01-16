@@ -14,13 +14,6 @@
 				background-color: #fff;
 			}
 
-		tr[data-href]{
-			cursor: pointer;
-			transition: background-color 500ms ease-out 100ms;
-		}
-		tr[data-href]:hover{
-			background-color:#e5e5e5;
-		}
 		</style>
 	</head>
 	<body>
@@ -47,70 +40,32 @@
         </div> 
     </div>
 	<div class="main_content">
-		<div class="header">ISSUE LOGS</div>  
-				<div class="info">
-					<a href="createIssue.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">CREATE ISSUE</a>
-					<br><br/>
-					<div class="input-group rounded">
-						<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-							aria-describedby="search-addon" />
-						<span class="input-group-text border-0" id="search-addon">
-						<i class="fas fa-search"></i></span>
-					</div>
-					<br>
-					<table class="table table-reflow"  >
-						<thead>
-							<tr>
-								<th>Issue ID</th>
-								<th>Task ID</th>
-								<th>Contracted Company</th>
-								<th>Company representative</th>
-								<th>Date Created</th>
-								<th>Status</th>
-								<th>Date Resolved</th>
-								<th>Resolved by</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr data-href="issue1(not_done).html">
-								<th scope="row">1</th>
-								<td>2</td>
-								<td>--</td>
-								<td>--</td>
-								<td>September 20, 2021</td>
-								<td>Unresolved</td>
-								<td>--</td>
-								<td>Trisha Tolentino</td>
-							</tr>
-							<tr data-href="issue2(done).html">
-								<th scope="row">2</th>
-								<td>4</td>
-								<td>Credited Aircon Repair Company</td>
-								<td>Jasffer Padigdig</td>
-								<td>September 29, 2021</td>
-								<td>Resolved</td>
-								<td>October 14, 2021</td>
-								<td>Jan Laurene Manrique</td>
-							</tr>
-
-						</tbody>
-					</table>
+		<div class="header">ASSIGN NEW TASK</div>	
+        <div class="info">
+					<form>
+						<div class="form-group">
+						<label for="typeOfForm">Type of Machine</label>
+              <select class="form-control" id="typeOfForm">
+              		<option value="no">None</option>
+                    <option value="genset">Generator Set</option>
+                    <option value="aircon" selected>Aircon</option>
+              </select>
+            </div>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Task name</label>
+							<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput3">Assign to</label>
+							<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Name">
+						</div>
+						<a href="index.html" class="btn btn-primary mb-2" role="button" aria-pressed="true">Submit</a>
+					</form>
 				</div>
-			</div>
+    </div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
-	<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", () =>{
-			const rows = document.querySelectorAll("tr[data-href]");
-			
-			rows.forEach(row => {
-				row.addEventListener("click", ()=>{
-					window.location.href = row.dataset.href;
-				});
-			});
-		});
-	</script>
 	</body>
 </html>
