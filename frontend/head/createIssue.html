@@ -44,34 +44,38 @@
         <div class="info">
 					<form>
 						<div class="form-group">
-						<label for="typeOfForm">Machine Type</label>
+						<label for="typeOfForm">Type of Machine</label>
               			<select class="form-control" id="typeOfForm">
-              				<option value="no">None</option>
-                    		<option value="genset">Generator Set</option>
-                    		<option value="aircon">Aircon</option>
+              				<option value="no">--</option>
+                    		<option value="aircon">HVAC</option>
+                    		<option value="genset">GENERATOR SETS</option>
               			</select>
             			</div>
 						<div class="form-group">
 							<label for="formGroupExampleInput2">Machine</label>
+							<input type="text" class="form-control" id="defaultMessage" placeholder="Select Type of Machine" disabled>
+							<select class="form-control" id="airconForm">
+							  <option value="0">--</option>
+							  <option value="1">Aircon 209-C </option>
+							  <option value="2">Aircon 608-A</option>
+							  <option value="3">Aircon 700-A</option>
+							  <option value="4">Aircon 802 </option>
+							  <option value="5">Aircon 904-B</option>
+							</select>
+							<select class="form-control" id="gensetForm">
+								<option value="0">--</option>
+								<option value="1">Generator Set I </option>
+								<option value="2">Generator Set II</option>
+							  </select>
 						</div>
 						<div class="form-group">
 							<label for="formGroupExampleInput2">Issue</label>
 							<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Issue Description">
 						</div>
 						<div class="form-group">
-							<input type="checkbox" name="issue1" id="issue1" value="true" onclick="issueFunction()" disabled>
-							<label for="issue1">Abnormal reading detected?</label>
+							<label for="other_remarks">Other Remarks</label>
+							<textarea class="form-control" id="issue_comments" rows="3" placeholder="Place remarks here"></textarea>
 						</div>
-						<div class="form-group">
-							<label for="typeOfForm">Assign To</label>
-							  <select class="form-control" id="typeOfForm">
-								  <option value="0">--</option>
-								  <option value="1">Christian Paul Duria</option>
-								  <option value="2">Demeter Renee Caubang</option>
-								  <option value="3">Jan Laurene Manrique</option>
-								  <option value="4">Trisha Nicole Tolentino</option>
-							  </select>
-							</div>
 						<a href="index.html" class="btn btn-primary mb-2" role="button" aria-pressed="true">Submit</a>
 					</form>
 				</div>
@@ -79,6 +83,24 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">		
+	$("#typeOfForm").change(function() {
+			if ($(this).val() == "genset") {
+				$('#defaultMessage').hide();
+				$('#gensetForm').show();
+				$('#airconForm').hide();
+			}else if ($(this).val() == "aircon") {
+				$('#defaultMessage').hide();
+				$('#gensetForm').hide();
+				$('#airconForm').show();
+			}else {
+				$('#defaultMessage').show();
+				$('#gensetForm').hide();
+				$('#airconForm').hide();
+			}
+		});
+		$("#typeOfForm").trigger("change");
+	</script>
 	</div>
 	</body>
 </html>

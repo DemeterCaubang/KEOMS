@@ -47,141 +47,105 @@
     <div class="main_content">
         <div class="header">EQUIPMENT INVENTORY</div>  
         <div class="info">
-          <form class="p-3">
-            <div class="form-group">
-			  <p>Equipment ID: 2</p><br>
-              <label for="typeOfForm">Type of Report Form</label>
-              <select class="form-control" id="typeOfForm" disabled>
-                    <option value="no">None</option>
-                    <option value="genset">Generator Set</option>
-                    <option value="aircon" selected>Aircon</option>
-              </select>
-            </div>
-            <div class="form-group" id="airconForm">
-			<div class="form-group">
-	              <label for="floor">Floor</label>
-	              <select class="form-control" id="floor" disabled>
-	                    <option value="">--</option>
-	                    <option value="1">Ground Floor</option>
-	                    <option value="2">2nd Floor</option>
-	                    <option value="3">3rd Floor</option>
-	                    <option value="4">4th Floor</option>
-	                    <option value="5">5th Floor</option>
-	                    <option value="6"selected>6th Floor</option>
-	                    <option value="7">7th Floor</option>
-	                    <option value="8">8th Floor</option>
-	                    <option value="9">9th Floor</option>
-	                    <option value="10">10th Floor</option>
-	                    <option value="11">11th Floor</option>
-	                    <option value="12">12th Floor</option>
-	              </select>
-	            </div>
-	            <div class="row">
-	              <div class="col-6">
-	                <label for="roomNumber">Room Number</label>
-	                <input type="text" class="form-control w-100" id="roomNumber" placeholder="609-C" disabled>
-	              </div>
-	              <div class="col-6">
-	                <label for="roomClassification">Room Classification</label>
-	                <input type="text" class="form-control w-100" id="roomClassification" placeholder="Lecture Hall" disabled>
-	              </div>
-	            </div>
-	            <br>
-	            <div class="row">
-	              <div class="col-4">
-	                <label for="fcuNumber">FCU No.</label>
-	                <input type="number" class="form-control w-100" id="fcuNumber" placeholder="181" disabled>
-	              </div>
-	              <div class="col-4">
-	                <label for="description">Description</label>
-		              <select class="form-control" id="floor" disabled>
-		                    <option value="">--</option>
-		                    <option value="1" selected>1 is to 1</option>
-		                    <option value="2">2 in 1</option>
-		                    <option value="3">3 in 1</option>
-							<option value="4">Centralized</option>
-		              </select>
-	              </div>
-	              <div class="col-4">
-	                <label for="brand">Brand</label>
-	                <input type="text" class="form-control w-100" id="brand" placeholder="Carrier" disabled>
-	              </div>
-	            </div>
-	            <br>
-	            <div class="row">
-	              <div class="col-6">
-	                <label for="hpIndoor">Horse Power (HP) - INDOOR</label>
-	                <input type="number" class="form-control w-100" id="hpIndoor" placeholder="3" disabled>
-	              </div>
-	              <div class="col-6">
-	                <label for="hpOutdoor">Horse Power (HP) - OUTDOOR</label>
-	                <input type="number" class="form-control w-100" id="hpOutdoor" placeholder="3" disabled>
-	              </div>
-	            </div>
-	            <br>
-	            <div class="row">
-	              <div class="col-4">
-	                <label for="dateInstalled">Date Installed</label>
-	                <input type="text" class="form-control w-100" id="dateInstalled" placeholder="2001" disabled>
-	              </div>
-	              <div class="col-4">
-	                <label for="status">Status</label>
-		              <select class="form-control" id="status" disabled>
-		                    <option value="">--</option>
-		                    <option value="1" selected>Old</option>
-		                    <option value="2">New</option>
-		              </select>
-	              </div>
-	              <div class="col-4">
-	                <label for="remarks">Remarks</label>
-		              <select class="form-control" id="remarks" disabled>
-		                    <option value="">--</option>
-		                    <option value="1">Casset Type</option>
-		                    <option value="2" selected>Celling suspended</option>
-		                    <option value="3">Ceiling suspended Inverter</option>
-		                    <option value="4">Wall Mounted split</option>
-		                    <option value="5">Wall Mounted Multi split</option>
-		                    <option value="6">Floor Standing</option>
-		                    <option value="7">Centralized</option>
-		              </select>
-	              </div>
-	            </div>
-	            <br>
-	            <div class="row">
-	              <div class="col-6">
-	                <label for="history">History</label>
-	                <input type="text" class="form-control w-100" id="history">
-	              </div>
-	              <div class="col-6">
-	                <label for="dateClean">Date Clean</label>
-	                <input type="date" class="form-control w-100" id="dateClean">
-	              </div>
-	            </div>
-	            <br>
-	            <p>PREVENTIVE MAINTENANCE</p>
-	            <div class="row">
-	              <div class="col-4">
-	                <label for="indoorDate">Indoor/Date</label>
-	                <input type="date" class="form-control w-100" id="indoorDate">
-	              </div>
-	              <div class="col-4">
-	                <label for="outdoorDate">Outdoor/Date</label>
-	                <input type="date" class="form-control w-100" id="outdoorDate">
-	              </div>
-	              <div class="col-4">
-	                <label for="filterDate">Filter/Date</label>
-	                <input type="text" class="form-control w-100" id="filterDate" placeholder="June 24,2020" disabled>
-	              </div>
-	            </div>
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-          <script src="formFields.js"></script>
-      </div>
-    </div>
-</div>
+		<br>
+		<p id="task_info">MACHINE INFORMATION</p>
+          <table class="table table-bordered table-striped" id="machine_table">
+			<tbody>
+				<tr>
+					<td id="machine_desc">Machine</td>
+					<td>Aircon</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Asset</td>
+					<td>HVAC</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Number of repairs/issue</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Brand</td>
+					<td>Mitsubishi</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Size</td>
+					<td>--</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Spec</td>
+					<td>--</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Model number</td>
+					<td>MLSE5896</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Serial Number</td>
+					<td>AX21-751</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Floor</td>
+					<td>6th floor</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Room Number</td>
+					<td>608-A</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Date installed</td>
+					<td>September 19, 2016</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Date last used</td>
+					<td>September 13, 2021</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Condition</td>
+					<td>OK</td>
+				</tr>
+				
+			</tbody>
+		  </table><br><br>
+		  
+		  <p id="task_info">MACHINE REPORT HISTORY</p>
+          <table class="table table-reflow" id="machine_history">
+			<tbody>
+				<tr>
+					<th>ID</th>
+					<th>Task</th>
+					<th>Date submitted</th>
+					<th>Issue/For Repair</th>
+					<th>Issue Status</th>
+					<th>Submitted by</th>
+				</tr>
+				<tr data-href="dailyReports_aircon(not_done)">
+					<td>2</td>
+					<td>General Cleaning Aircon</td>
+					<td>January 15, 2022</td>
+					<td>Yes</td>
+					<td>--</td>
+					<td>Jan Laurene Manrique</td>
+				</tr>			
+			</tbody>
+		  </table>
+		  <a href="createTask(determinedAirConNotGood).html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW TASK</a>
+		 
+		</div>
+	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () =>{
+			const rows = document.querySelectorAll("tr[data-href]");
+			
+			rows.forEach(row => {
+				row.addEventListener("click", ()=>{
+					window.location.href = row.dataset.href;
+				});
+			});
+		});
+	</script>
 	</body>
 </html>

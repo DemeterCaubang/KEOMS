@@ -30,7 +30,7 @@
 				<li><a href="dailyReports.html"><i class="fas fa-paste"></i>Daily Reports</a></li>
 				<li><a href="pastReports.html"><i class="fas fa-history"></i>Past Reports</a></li>
 				<li><a href="equipmentInventory.html"><i class="fas fa-database"></i>Equipment Inventory</a></li>
-				<li><a href="issueLogs.html"><i class="fas fa-exclamation-triangle"></i>Issue Logs</a></li>				<li><a href="users.html"><i class="fas fa-users"></i>Users</a></li>
+				<li><a href="issueLogs.html"><i class="fas fa-exclamation-triangle"></i>Issue Logs</a></li>
 			</ul>
         <div class="social_media">
           <a href="../../index.html"><i class="fas fa-sign-out-alt"></i></a>
@@ -44,20 +44,20 @@
 					<form>
 						<div class="form-group">
 						<label for="typeOfForm">Type of Machine</label>
-              			<select class="form-control" id="typeOfForm">
+              			<select class="form-control" id="typeOfForm" disabled>
               				<option value="no">--</option>
-                    		<option value="aircon">HVAC</option>
+                    		<option value="aircon"  selected>HVAC</option>
                     		<option value="genset">GENERATOR SETS</option>
               			</select>
             			</div>
 						<div class="form-group">
 							<label for="formGroupExampleInput2">Machine</label>
 							<input type="text" class="form-control" id="defaultMessage" placeholder="Select Type of Machine" disabled>
-							<select class="form-control" id="airconForm">
+							<select class="form-control" id="airconForm" disabled>
 							  <option value="0">--</option>
 							  <option value="1">Aircon 209-C </option>
 							  <option value="2">Aircon 608-A</option>
-							  <option value="3">Aircon 700-A</option>
+							  <option value="3" selected>Aircon 700-A</option>
 							  <option value="4">Aircon 802 </option>
 							  <option value="5">Aircon 904-B</option>
 							</select>

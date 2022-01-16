@@ -13,6 +13,9 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
+		.wrapper .sidebar {
+				height: 170%;
+		}
 		</style>
 	</head>
 	<body>
@@ -42,131 +45,105 @@
         <div class="header">ADD NEW EQUIPMENT</div>  
         <div class="info">
           <form class="p-3">
-	        <br>
             <div class="form-group">
-              <label for="typeOfForm">Type of Equipment</label>
+              <label for="typeOfForm">Type of Report Form</label>
               <select class="form-control" id="typeOfForm">
                     <option value="no">--</option>
-                    <option value="genset">HVAC</option>
-                    <option value="aircon">GENERATOR SETS</option>
+                    <option value="aircon">HVAC</option>
+                    <option value="genset">GENERATOR SET</option>
               </select>
             </div>
             <!--GENSET FORM-->
             <div class="form-group" id="gensetForm">
 					<div class="form-group">
-						<div class="table">
-							<div id="row">
-								<div id="td">
-									<label for="volt">Voltage</label>
-								</div>
-								<div id="td">
-									<input type="number" class="v" id="v1" name="Volt" placeholder="Line 1-2" required />
-									<input type="number" class="v" id="v2" name="Volt" placeholder="Line 2-3" required />
-									<input type="number" class="v" id="v3" name="Volt" placeholder="Line 3-1" required />
-								</div>
-							</div>
-							<br>
-							<div id="row">
-								<div id="td">
-									<label for="volt">Current</label>
-								</div>
-								<div id="td">
-									<input type="number" class="amp" id="amp1" name="Ampere" placeholder="Line 1" required />
-									<input type="number" class="amp" id="amp2" name="Ampere" placeholder="Line 2" required />
-									<input type="number" class="amp" id="amp3" name="Ampere" placeholder="Line 3" required />
-								</div>
-							</div>
-							<br>
-							<div id="row">
-								<div id="td">
-									<label for="hertz">Frequency</label>
-								</div>
-								<div id="td">
-									<input type="number" class=" hz" id="hetz" name="hertz" placeholder="Frequency(hz)" required />
-								</div>
-							</div>
-							<br>
-							<div id="row">
-								<div id="td">
-									<label for="hertz">Battery Voltage</label>
-								</div>
-								<div id="td">
-									<input type="number" class=" vdc" id="voltDC" name="voltDC" placeholder="Battery Voltage(vdc)" required />
-								</div>
-							</div>
-							<br>
-							<div id="row">
-								<div id="td">
-									<label for="hertz">Running Hours</label>
-								</div>
-								<div id="td">
-									<input type="number" class=" hrs" id="hours" name="hours" placeholder="Running hours(h)" required />
-								</div>
-							</div>
-							<br>
-							<div id="row">
-								<div id="td">
-									<label for="hertz">Oil Pressure</label>
-								</div>
-								<div id="td">
-									<input type="number" class=" psi" id="pressure" name="pressure" placeholder="Oil Pressure(psi)" required />
-								</div>
-							</div>
-							<br>
-							<div id="row">
-								<div id="td">
-									<label for="hertz">Oil Temperature</label>
-								</div>
-								<div id="td">
-									<input type="number" class=" F" id="fahrenheit" name="fahrenheit" placeholder="Oil temp(F)" required />
-								</div>
-							</div>
-							<br>
-							<div id="row">
-								<div id="td">
-									<label for="hertz">Frequency of rotation</label>
-								</div>
-								<div id="td">
-									<input type="number" class=" rpm" id="rev" name="rev" placeholder="Freq of rotation(rpm)" required />
-								</div>
-							</div>
-							<br>
-							<div id="row">
-								<div id="td">
-									<label for="hertz">Fuel level</label>
-								</div>
-								<div id="td">
-									<input type="number" class=" L" id="liters" name="liters" placeholder="Fuel level(L)" required />
-								</div>
-							</div>
-						</div>
-						<br>
-						<div id="row">
-							<div id="td">
-								<input type="checkbox" name="issue1" id="issue1" value="true" onclick="issueFunction()">
-								<label for="issue1">Is there any abnormal sound produced during testing?</label>
-							</div>
-						</div>
-						<br>
-						<div id="issueField1">
-							<div id="td">
-								<label for="issueDesc1">Other remarks</label>
-								<br>
-								<input type="text" class="form-control" name="issueDesc1" id="issueDesc1" placeholder="Input remarks here">
-							</div>
-						</div>
-						<br>
-						<div id="row">
-							<div id="td">
-								<input type="checkbox" name="issue2" id="issue2" value="true" onclick="issueFunction()">
-								<label for="issue2">Are there any noticeable oil or gas leaks?</label>
-							</div>
-						</div>
-						<div id="issueField2">
-						</div>
-						<br>
+					  <label for="floor">Floor</label>
+					  <select class="form-control" id="floor">
+							<option value="">--</option>
+							<option value="1">Basement 1</option>
+							<option value="2">Basement 2</option>
+					  </select>
 					</div>
-            </div>
+					<div class="row">
+					  <div class="col-6">
+						<label for="roomNumber">Room Number</label>
+						<input type="text" class="form-control w-100" id="roomNumber" placeholder="--" disabled>
+					  </div>
+					  <div class="col-6">
+						<label for="roomClassification">Room Classification</label>
+						<input type="text" class="form-control w-100" id="roomClassification" placeholder="--" disabled>
+					  </div>
+					</div>
+					<br>
+					<p>PARAMETERS</p>
+					<div class="row">
+					  <div class="col-4">
+						<label for="voltage">Voltage</label>
+						<input type="number" class="form-control w-100" id="voltage">
+					  </div>
+					  <div class="col-4">
+						<label for="voltage">Current</label>
+						<input type="number" class="form-control w-100" id="fcuNumber">
+					  </div>
+					  <div class="col-4">
+						<label for="brand">Frequency</label>
+						<input type="text" class="form-control w-100" id="brand">
+					  </div>
+					</div>
+					<br>
+					<div class="row">
+					  <div class="col-6">
+						<label for="hpIndoor">Battery Voltage</label>
+						<input type="number" class="form-control w-100" id="hpIndoor">
+					  </div>
+					  <div class="col-6">
+						<label for="hpOutdoor">Running Hours</label>
+						<input type="number" class="form-control w-100" id="hpOutdoor">
+					  </div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-6">
+						  <label for="hpIndoor">Oil Pressure</label>
+						  <input type="number" class="form-control w-100" id="hpIndoor">
+						</div>
+						<div class="col-6">
+						  <label for="hpOutdoor">Oil Temperature</label>
+						  <input type="number" class="form-control w-100" id="hpOutdoor">
+						</div>
+					  </div>
+					  <br>
+					  <div class="row">
+						<div class="col-6">
+						  <label for="hpIndoor">Frequency of Rotation</label>
+						  <input type="number" class="form-control w-100" id="hpIndoor">
+						</div>
+						<div class="col-6">
+						  <label for="hpOutdoor">Fuel Level</label>
+						  <input type="number" class="form-control w-100" id="hpOutdoor">
+						</div>
+					  </div>
+					  <br>
+					<div class="row">
+					  <div class="col-6">
+						<label for="dateInstalled">Date Installed</label>
+						<input type="date" class="form-control w-100" id="dateInstalled">
+					  </div>
+					  <div class="col-6">
+						<label for="status">Status</label>
+						  <select class="form-control" id="status">
+								<option value="">--</option>
+								<option value="1">Old</option>
+								<option value="2">New</option>
+						  </select>
+					  </div>
+					</div>
+					<br>
+					<div class="form-group">
+						<label for="floor">History</label>
+						<input type="text" class="form-control">
+					</div>
+				</div> 
+            <!--AIRCON FORM-->
             <div class="form-group" id="airconForm">
 	            <div class="form-group">
 	              <label for="floor">Floor</label>
@@ -284,33 +261,39 @@
 	              </div>
 	            </div>
             </div>
+
+            <!-- <div class="form-group">
+              <label for="comments">Comments/Questions</label>
+              <textarea class="form-control" id="comments" rows="3" placeholder="Type your comments or questions here"></textarea>
+            </div> -->
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
 
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-          <script src="formFields.js"></script>
+          <script>
+			  		
+			$("#typeOfForm").change(function() {
+			if ($(this).val() == "genset") {
+				$('#gensetForm').show();
+				$('#airconForm').hide();
+			}else if ($(this).val() == "aircon") {
+				$('#gensetForm').hide();
+				$('#airconForm').show();
+			}else {
+				$('#gensetForm').hide();
+				$('#airconForm').hide();
+			}
+		});
+		$("#typeOfForm").trigger("change");
+		
+		  </script>
       </div>
     </div>
 </div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script>
-	$("#typeOfForm").change(function() {
-		if ($(this).val() == "genset") {
-			$('#gensetForm').show();
-			$('#airconForm').hide();
-		}else if ($(this).val() == "aircon") {
-			$('#gensetForm').hide();
-			$('#airconForm').show();
-		}else {
-			$('#gensetForm').hide();
-			$('#airconForm').hide();
-		}
-	});
-	$("#typeOfForm").trigger("change");
-	</script>
-</div>
+	</div>
 	</body>
 </html>

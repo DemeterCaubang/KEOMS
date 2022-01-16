@@ -29,7 +29,7 @@
 			/* border: 1px solid black; */
 			text-align: left;
 			background-color: #fff;
-			height: 30vh;
+			/* height: 30vh; */
 		}
 		.cell_tasks{
 			grid-column-start: 1;
@@ -55,6 +55,22 @@
 		}
 		.table-wrapper-scroll-y {
 		display: block;
+		}
+		.my-custom-scrollbar {
+		position: relative;
+		height: 300px;
+		overflow: auto;
+		}
+		.table-wrapper-scroll-y {
+		display: block;
+		}
+		
+		h2{
+			font-weight: bold;
+		}
+		
+		a{
+			color: #fff;
 		}
 		</style>
 	</head>
@@ -140,6 +156,7 @@
 											<th>ID</th>
 											<th>Task</th>
 											<th>Machine</th>
+											<th>Asset</th>
 											<th>Floor</th>
 											<th>Room Number</th>
 											<th>Assigned to</th>
@@ -152,10 +169,14 @@
 										<tr data-href="createReport_aircon(no_issue).html">
 											<th scope="row">1</th>
 											<td>General Cleaning Aircon</td>
-											<td>Aircon</td>
+
+											<td><a href="equipmentInventory_aircon(OK).html">Aircon</a></td>
+
+											<td>HVAC</td>
+
 											<td>7th floor</td>
 											<td>700-A</td>
-											<td> Christian Paul Duria</td>
+											<td>Christian Paul Duria</td>
 											<td>September 13, 2021</td>
 											<td>September 13, 2021</td>
 											<td>Pending</td>
@@ -163,7 +184,11 @@
 										<tr data-href="createReport_aircon(done_issue).html">
 											<th scope="row">2</th>
 											<td>Check A/C</td>
-											<td>Aircon</td>
+
+											<td><a href="equipmentInventory_aircon(OK).html">Aircon</a></td>
+
+											<td>HVAC</td>
+
 											<td>9th floor</td>
 											<td>904-B</td>
 											<td>Jan Laurene Manrique</td>
@@ -174,7 +199,11 @@
 										<tr data-href="createReport_aircon(yes_issue).html">
 											<th scope="row">3</th>
 											<td>Check Aircon</td>
-											<td>Air con</td>
+
+											<td><a href="equipmentInventory_aircon(OK).html">Aircon</a></td>
+
+											<td>HVAC</td>
+
 											<td>8th floor</td>
 											<td>802</td>
 											<td> Trisha Tolentino</td>
@@ -185,7 +214,11 @@
 										<tr data-href="createReport_GenSet.html">
 											<th scope="row">4</th>
 											<td>Generator Set no-load testing</td>
-											<td>Generator Set II</td>
+
+											<td><a href="equipmentInventory_genset(not_good)">Generator Set I</a></td>
+
+											<td>Genset</td>
+
 											<td>Basement 2</td>
 											<td>--</td>
 											<td>Demeter Renee Caubang</td>
@@ -196,7 +229,11 @@
 										<tr data-href="createReport_GenSet.html">
 											<th scope="row">5</th>
 											<td>Check overheating A/C</td>
-											<td>Air Conditioner</td>
+
+											<td><a href="equipmentInventory_aircon(OK).html">Air conditioner</a></td>
+
+											<td>HVAC</td>
+
 											<td>6th floor</td>
 											<td>606</td>
 											<td>Jasffer padigdig</td>
@@ -217,7 +254,6 @@
     		<div class="card card-flexible" style="background: linear-gradient(to right, #ACCBE1 0%, #6998AB 100%); color:black; text-align: left;">
 					<div class="card-body">
 						<h2>USERS</h2>
-						<!-- <span><a href="users.html" class="btn btn-success" role="button" aria-pressed="true">Go to Users Page</a></span><br><br> -->
 						<div class="table-wrapper-scroll-y my-custom-scrollbar table-flexible">
 								<table class="table table-dark mb-0">
 									<thead>
@@ -226,15 +262,7 @@
 											<th>No. of Tasks</th>
 										</tr>
 									</thead>
-									<tbody>
-										<tr data-href="">
-											<td>Christian Paul Duria</td>
-											<td>3</td>
-										</tr>
-										<tr data-href="">
-											<td>Demeter Caubang</td>
-											<td>5</td>
-										</tr>
+									<tbody>										
 										<tr data-href="#">
 											<td>Jan Laurene Manrique</td>
 											<td>2</td>
@@ -256,6 +284,7 @@
 											<td>5</td>
 										</tr>
 										<tr data-href="#">
+
 											<td>Juan dela Cruz</td>
 											<td>4</td>
 										</tr>

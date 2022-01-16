@@ -16,6 +16,9 @@
 		#task_info{
 			font-size:1.7vw;
 		}
+		.wrapper .sidebar{
+			height: 200%;
+		}
 		</style>
 	</head>
 	<body>
@@ -44,117 +47,105 @@
     <div class="main_content">
         <div class="header">EQUIPMENT INVENTORY</div>  
         <div class="info">
-          <form class="p-3">
-            <div class="form-group">
-			  <p>Equipment ID: 3</p><br>
-			  <label for="typeOfForm">Type of Report Form</label>
-              <select class="form-control" id="typeOfForm" disabled>
-                    <option value="no">None</option>
-                    <option value="genset" selected>Generator Set</option>
-                    <option value="aircon">Aircon</option>
-              </select><br>
-              <div class="table">
-				<div id="row">
-					<div id="col-5">
-						<label for="volt">Voltage</label>
-						<input type="number" class="v" id="v1" name="Volt" placeholder="225" required disabled/>
-						<input type="number" class="v" id="v2" name="Volt" placeholder="225" required disabled/>
-						<input type="number" class="v" id="v3" name="Volt" placeholder="225" required disabled/>
-					</div>
-				</div>
-				<br>
-				<div id="row">
-					<div id="col-5">
-						<label for="volt">Current</label>
-						<input type="number" class="amp" id="amp1" name="Ampere" placeholder="0" required disabled/>
-						<input type="number" class="amp" id="amp2" name="Ampere" placeholder="0" required disabled/>
-						<input type="number" class="amp" id="amp3" name="Ampere" placeholder="0" required disabled/>
-					</div>
-				</div>
-				<br>
-				<div id="row">
-					<div id="col-3">
-						<label for="hertz">Frequency</label>
-						<input type="number" class=" hz" id="hetz" name="hertz" placeholder="60 hz" required disabled/>
-					</div>
-				</div>
-				<br>
-				<div id="row">
-					<div id="col-3">
-						<label for="hertz">Battery Voltage</label>
-						<input type="number" class=" vdc" id="voltDC" name="voltDC" placeholder="25.7 VDC" required disabled/>
-					</div>
-				</div>
-				<br>
-				<div id="row">
-					<div id="col-3">
-						<label for="hertz">Running Hours</label>
-						<input type="number" class=" hrs" id="hours" name="hours" placeholder="138.5 h" required disabled/>
-					</div>
-				</div>
-				<br>
-				<div id="row">
-					<div id="col-3">
-						<label for="hertz">Oil Pressure</label>
-						<input type="number" class=" psi" id="pressure" name="pressure" placeholder="43 psi" required disabled/>
-					</div>
-				</div>
-				<br>
-				<div id="row">
-					<div id="col-3">
-						<label for="hertz">Oil Temperature</label>
-						<input type="number" class=" F" id="fahrenheit" name="fahrenheit" placeholder="140 F" required disabled/>
-					</div>
-				</div>
-				<br>
-				<div id="row">
-					<div id="col-3">
-						<label for="hertz">Frequency of rotation</label>
-						<input type="number" class=" rpm" id="rev" name="rev" placeholder="1813 rpm" required disabled/>
-					</div>
-				</div>
-				<br>
-				<div id="row">
-					<div id="col-3">
-						<label for="hertz">Fuel level</label>
-						<input type="number" class=" L" id="liters" name="liters" placeholder="1600 L" required disabled/>
-					</div>
-				</div>
-			</div>
-			<br>
-			<div id="row">
-				<div id="td">
-					<input type="checkbox" name="issue1" id="issue1" value="true" onclick="issueFunction()" disabled>
-					<label for="issue1">Is there any abnormal sound produced during testing?</label>
-				</div>
-			</div>
-			<div id="issueField1" style="display:none;">
-
-					<label for="issueDesc1">Other remarks</label>
-					<textarea rows="3" class="form-control" id="issueDesc1" placeholder="Additional remarks here" style="width: 40vw;" ></textarea>
-			</div>
-			<br>
-			<div id="row">
-				<div id="td">
-					<input type="checkbox" name="issue2" id="issue2" value="true" onclick="issueFunction()" disabled>
-					<label for="issue2">Are there any noticeable oil or gas leaks?</label>
-				</div>
-			</div>
-			<div id="issueField2" style="display:none;">
-
-					<label for="issueDesc2">Other remarks</label>
-					<textarea rows="3" class="form-control" id="issueDesc2" placeholder="Additional remarks here" style="width: 40vw;"></textarea>
-
-			</div>
-          </div>
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-      </div>
-    </div>
-</div>
+		<br>
+		<p id="task_info">MACHINE INFORMATION</p>
+          <table class="table table-bordered table-striped" id="machine_table">
+			<tbody>
+				<tr>
+					<td id="machine_desc">Machine</td>
+					<td>Generator Set I</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Asset</td>
+					<td>Generator Set</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Number of repairs/issue</td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Brand</td>
+					<td>--</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Size</td>
+					<td>--</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Spec</td>
+					<td>--</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Model number</td>
+					<td>TGHY8645</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Serial Number</td>
+					<td>XY43-9123</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Floor</td>
+					<td>Basement II</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Room Number</td>
+					<td>--</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Date installed</td>
+					<td>2001</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Date last used</td>
+					<td>January 10, 2022</td>
+				</tr>
+				<tr>
+					<td id="machine_desc">Condition</td>
+					<td>Not Good</td>
+				</tr>
+				
+			</tbody>
+		  </table><br><br>
+		  
+		  <p id="task_info">MACHINE REPORT HISTORY</p>
+          <table class="table table-reflow" id="machine_history">
+			<tbody>
+				<tr>
+					<th>ID</th>
+					<th>Task</th>
+					<th>Date submitted</th>
+					<th>Issue/For Repair</th>
+					<th>Issue Status</th>
+					<th>Submitted by</th>
+				</tr>
+				<tr data-href="createReport_GenSet.html">
+					<td>3</td>
+					<td>Generator Set no-load testing</td>
+					<td>April 29, 2021</td>
+					<td>No</td>
+					<td>Done</td>
+					<td>Demeter Renee Caubang</td>
+				</tr>			
+			</tbody>
+		  </table>
+		  <a href="createTask(determinedGenSetNotGood).html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW TASK</a>
+		 
+		</div>
+	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () =>{
+			const rows = document.querySelectorAll("tr[data-href]");
+			
+			rows.forEach(row => {
+				row.addEventListener("click", ()=>{
+					window.location.href = row.dataset.href;
+				});
+			});
+		});
+	</script>
 	</body>
 </html>

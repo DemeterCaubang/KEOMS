@@ -14,12 +14,20 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
+				* {
+		  box-sizing: border-box;
+		}
+
+		tr[data-href]{
+			cursor: pointer;
+			transition: background-color 500ms ease-out 100ms;
+		}
+		tr[data-href]:hover{
+			background-color:#e5e5e5;
+		}
 
 		a{
 			color:#1d2124;
-		}
-				* {
-		  box-sizing: border-box;
 		}
 
 		#myInput {
@@ -40,6 +48,10 @@
 		  font-size: 18px;
 		}
 
+		#myTable tr #header, #myTable tr #header:hover{
+		  background-color: #fff;
+		}
+
 		#myTable th, #myTable td {
 		  text-align: left;
 		  padding: 12px;
@@ -49,9 +61,6 @@
 		  border-bottom: 1px solid #ddd;
 		}
 
-		#myTable tr:hover{
-		  background-color: #f1f1f1;
-		}
 		</style>
 	</head>
 	<body>
@@ -89,7 +98,7 @@
 
 					<table class="table table-reflow" id="myTable">
 						<thead>
-							<tr class="header">
+							<tr id="header">
 								<th>ID</th>
 								<th>Task</th>
 								<th>Machine</th>
@@ -127,7 +136,7 @@
 							<tr data-href="createReport_GenSet.html">
 								<th scope="row">3</th>
 								<td>Generator Set no-load testing</td>
-								<td><a href="equipmentInventory_aircon(OK).html">Generator Set II</a></td>
+								<td><a href="equipmentInventory_genset(OK).html">Generator Set I</a></td>
 								<td>Basement 2</td>
 								<td>--</td>
 								<td>April 29, 2021</td>
@@ -138,7 +147,7 @@
 							<tr data-href="createReport_aircon(done_issue).html">
 								<th scope="row">4</th>
 								<td>Check A/C</td>
-								<td>Aircon</td>
+								<td><a href="equipmentInventory_aircon(OK).html">Aircon</a></td>
 								<td>9th floor</td>
 								<td>904-B</td>
 								<td>September 29, 2021</td>
