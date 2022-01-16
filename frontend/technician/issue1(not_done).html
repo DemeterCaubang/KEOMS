@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>BMO Head</title>
+		<title>Lead Technician</title>
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -13,8 +13,15 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
+
+		.issue_desc{
+			padding: 0px 20px 20px 20px;
+		}
+		
 		#task_info{
-			font-size:1.7vw;
+			font-size: 1.7vw;
+			padding: 20px 20px 0px 20px;
+			font-weight: bold;
 		}
 		</style>
 	</head>
@@ -33,70 +40,64 @@
 				<li><a href="pastReports.html"><i class="fas fa-history"></i>Past Reports</a></li>
 				<li><a href="equipmentInventory.html"><i class="fas fa-database"></i>Equipment Inventory</a></li>
 				<li><a href="issueLogs.html"><i class="fas fa-exclamation-triangle"></i>Issue Logs</a></li>
-				<li><a href="users.html"><i class="fas fa-users"></i>Users</a></li>
 			</ul>
         <div class="social_media">
           <a href="../../index.html"><i class="fas fa-sign-out-alt"></i></a>
           <a href="#"><i class="fas fa-users-cog"></i></a>
           <a href="#"><i class="fas fa-cogs"></i></a>
         </div> 
-		</div>
-    <div class="main_content">
-        <div class="header">DAILY REPORT</div>  
+    </div>
+	<div class="main_content">
+		<div class="header">ISSUE LOGS</div>
+		<p id="task_info">TASK #2 - CHECK AIRCON</p>
+		
+		
         <div class="info">
-          <form class="p-3">
-            <div class="form-group" id="airconForm">
-			<p id="task_info">Leaktest</p>
-				<div id="form-group">
+		<div class="issue_desc">
+			September 20, 2021 2:45pm<br>
+			<i>Issue description:</i><br>
+			"nagahoy yung piyesa liquid capacitor"
+		</div>
+			<form class="p-3">
+				<div class="form-group">
+				<div class="form-group">
+					<label for="issue_Recommendation">Recommendation</label>
+					<textarea rows="3" class="form-control" id="issueDesc2" placeholder="Additional remarks here" style="width: 40vw;"></textarea>
+				</div>
+				
+
 				<div class="row">
 					<div class="col-4">
-						<label for="volt">Volt</label>
-						<input type="number" id="volt" class="form-control w-100" placeholder="7" disabled/>
+						<label for="formGroupExampleInput2">Endorsed by</label>
+						<input type="text" class="form-control w-100" id="formGroupExampleInput2" placeholder="Endorser">
+						
 					</div>
 					<div class="col-4">
-						<label for="pressure">Pressure</label>
-						<input type="number" id="pressure" class="form-control w-100" placeholder="150" disabled/>
+						<label for="formGroupExampleInput2">Date endorsed for repair</label>
+						<input type="date" class="form-control w-100" id="formGroupExampleInput2" >
 					</div>
-					<div class="col-4">
-						<label for="temp">Temperature</label>
-						<input type="number" id="temp" class="form-control w-100" placeholder="21" disabled/>
-					</div>
-				</div>		
-						<br>
-					<input type="checkbox" id="issue" disabled/>
-					<label for="temp">Machine issues/For repair</label>
 				</div>
-            </div>
-
-            <div class="form-group">
-              <label for="comments">Other remarks</label>
-              <textarea class="form-control" id="comments" rows="3" placeholder="309A, 201A, 203B, 209A, not cooling" disabled></textarea>
-            </div>
-          </form>
-
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-          <script src="formFields.js"></script>
-      </div>
+					
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">Contracted company</label>
+					<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Company Name" style="width: 40vw;">
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">Company Representative</label>
+					<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Company Representative" style="width: 40vw;">
+				</div>
+				<div class="form-group">
+					<label for="formGroupExampleInput2">Service Report number</label>
+					<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Service number" style="width: 40vw;">
+				</div>
+				<a href="issueLogs.html" class="btn btn-primary mb-2" role="button" aria-pressed="true">Resolve issue</a>
+			</form>
+		</div>
     </div>
-</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
-	<script type="text/javascript">
-			function issueFunction(){
-				var field1 = document.getElementById("issues");
-				var field2 = document.getElementById("issue_comments");
-				if (document.getElementById("issue").checked) {
-					field1.style.display = "table-row";
-					field2.style.display = "table-row";
-				}else{
-					field1.style.display = "none";
-					field2.style.display = "none";
-				}
-
-			}
-		</script>
 	</body>
 </html>
