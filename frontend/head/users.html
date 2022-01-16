@@ -14,44 +14,92 @@
 				background-color: #fff;
 			}
 
-			.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+		button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+.cancelbtn, .updatebtn {
+  float: left;
+  width: 10%;
+}
+
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+.updatebtn {
+  background-color: ##358B49;
+}
+
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #474e5d;
+  padding-top: 50px;
 }
 
-/* Modal Content */
 .modal-content {
   background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
+  margin: 5% auto 15% auto; 
   border: 1px solid #888;
-  width: 80%;
+  width: 40%; 
 }
 
-/* The Close Button */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
   font-weight: bold;
+  color: #f1f1f1;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
+  color: #f44336;
   cursor: pointer;
 }
-		</style>
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300vw) {
+  .cancelbtn, .updatebtn {
+     width: 100%;
+  }
+}
+	</style>
 	</head>
 	<body>
 	<div class="wrapper">
@@ -99,7 +147,7 @@
 								<td>dpcaubang</td>
 								<td>dpcaubang@student.apc.edu.ph</td>
 								<td>Normal User</td>
-								<td><button id="myBtn" class="btn btn-success btn-lg active">Change Role</button></td>
+								<td><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-success btn-lg active">Change Role</button></td>
 							</tr>
 							<tr>
 								<th scope="row">2019-100150</th>
@@ -108,7 +156,7 @@
 								<td>jlmanrique</td>
 								<td>jlmanrique@student.apc.edu.ph</td>
 								<td>Normal User</td>
-								<td><a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Change Role</a></td>
+								<td><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-success btn-lg active">Change Role</button></td>
 							</tr>
 							<tr>
 								<th scope="row">2018-123456</th>
@@ -117,13 +165,14 @@
 								<td>tatolentino</td>
 								<td>tatolentino@student.apc.edu.ph</td>
 								<td>Normal User</td>
-								<td><a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Change Role</a></td>
+								<td><button onclick="document.getElementById('id01').style.display='block'" class="btn btn-success btn-lg active">Change Role</button></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
 	</div>
+<<<<<<< Updated upstream
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
@@ -131,7 +180,22 @@
     <span class="close">&times;</span>
     <h4>Change User Role</h4>
   </div>
+=======
+>>>>>>> Stashed changes
 
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Change Role</h1>
+      <p>Are you sure you want to change this user's role?</p>
+    
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="updatebtn">Update</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </div>
+  </form>
 </div>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -140,26 +204,10 @@
 	<script type="text/javascript">
 	</script>
 	<script>
-// Get the modal
-var modal = document.getElementById("myModal");
+		// Get the modal
+var modal = document.getElementById('id01');
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
+// Allows user to close modal by clicking anywhere outside the modal
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
