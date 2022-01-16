@@ -9,12 +9,57 @@
 		<style>
 		@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
+		/* DASHBOARD HTML */
 		body {
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
+				padding: 0;
+				margin:0;
 			}
+		.contnt{
+			/* background-color: blue; */
+			width: 100vw;
+			height: 10vh;
+			padding: 0 3vw;
+			display: grid;
+			grid-gap: 2vw;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		.cell, .cell_tasks, .cell_users{
+			/* border: 1px solid black; */
+			text-align: left;
+			background-color: #fff;
+			height: 30vh;
+		}
+		.cell_tasks{
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+		.card {
+			/* box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
+			border:none;
+			padding: 20px;
+			height: fit-content;
+
+		}
+		.card h1 {
+			font-size: 100px;
+		} 
+		.wrapper .sidebar{
+			height: 150%;
+		}
+		.my-custom-scrollbar {
+		position: relative;
+		height: 300px;
+		overflow: auto;
+		}
+		.table-wrapper-scroll-y {
+		display: block;
+		}
 		</style>
 	</head>
+
+	<!-- DASHBOARD BODY -->
 	<body>
 	<div class="wrapper">
 		<input type="checkbox" id="check">
@@ -32,20 +77,212 @@
 				<li><a href="issueLogs.html"><i class="fas fa-exclamation-triangle"></i>Issue Logs</a></li>
 			</ul>
         <div class="social_media">
-          <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+          <a href="../../index.html"><i class="fas fa-sign-out-alt"></i></a>
           <a href="#"><i class="fas fa-users-cog"></i></a>
           <a href="#"><i class="fas fa-cogs"></i></a>
         </div> 
     </div>
+    <!-- dashboard header -->
     <div class="main_content">
-        <div class="header">DASHBOARD</div>  
+        <div class="header">DASHBOARD</div>   
         <div class="info">
-      </div>
+    	    
+      	</div>
     </div>
-	</div>
+
+    <!-- dashboard header -->
+    <div class="contnt">
+
+    	<!-- finished tasks -->
+    	<div class="cell">
+    		<div class="card" style="background: linear-gradient(to right, #ACCBE1 0%, #6998AB 100%); color:black;">
+				<div class="media-body text-right">
+					<h1>6</h1>
+					<span>Finished Tasks</span>
+				</div>
+			</div>
+    	</div>
+
+    	<!-- active issues -->
+    	<div class="cell">
+    		<div class="card" style="background: linear-gradient(to right, #ACCBE1 0%, #6998AB 100%); color:black;">
+				<div class="media-body text-right">
+					<h1>13</h1>
+					<span>Active Issues</span>
+				</div>
+			</div>
+    	</div>
+
+    	<!-- active tasks -->
+    	<div class="cell">
+    		<div class="card" style="background: linear-gradient(to right, #ACCBE1 0%, #6998AB 100%); color:black;">
+				<div class="media-body text-right">
+					<h1>22</h1>
+					<span>Active Tasks</span>
+				</div>
+			</div>
+    	</div>
+
+    	<!-- 4th grid reserved -->
+    	<div class="cell_tasks">
+    		<div class="card card-flexible" style="background: linear-gradient(to right, #ACCBE1 0%, #6998AB 100%); color:black; text-align: left;">
+					<div class="card-body">
+
+						<!--TASKS DONE FOR THE MONTH -->
+						<div>
+							<h2>TASKS DONE FOR THE MONTH</h2>
+							<span><a href="pastReports.html" class="btn btn-success" role="button" aria-pressed="true">Go to Past reports</a></span>
+							<br><br>
+							<div class="table-wrapper-scroll-y my-custom-scrollbar table-flexible">
+								<table class="table table-dark mb-0">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Task</th>
+											<th>Machine</th>
+											<th>Floor</th>
+											<th>Room Number</th>
+											<th>Assigned to</th>
+											<th>Date Created</th>
+											<th>Date Submitted</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-href="createReport_aircon(no_issue).html">
+											<th scope="row">1</th>
+											<td>General Cleaning Aircon</td>
+											<td>Aircon</td>
+											<td>7th floor</td>
+											<td>700-A</td>
+											<td> Christian Paul Duria</td>
+											<td>September 13, 2021</td>
+											<td>September 13, 2021</td>
+											<td>Pending</td>
+										</tr>
+										<tr data-href="createReport_aircon(done_issue).html">
+											<th scope="row">2</th>
+											<td>Check A/C</td>
+											<td>Aircon</td>
+											<td>9th floor</td>
+											<td>904-B</td>
+											<td>Jan Laurene Manrique</td>
+											<td>September 29, 2021</td>
+											<td>September 29, 2021</td>
+											<td><p class="text-success">Done</p></td>
+										</tr>
+										<tr data-href="createReport_aircon(yes_issue).html">
+											<th scope="row">3</th>
+											<td>Check Aircon</td>
+											<td>Air con</td>
+											<td>8th floor</td>
+											<td>802</td>
+											<td> Trisha Tolentino</td>
+											<td>September 20, 2021</td>
+											<td>September 20, 2021</td>
+											<td><p class="text-danger">Done (with issues)</p></td>
+										</tr>
+										<tr data-href="createReport_GenSet.html">
+											<th scope="row">4</th>
+											<td>Generator Set no-load testing</td>
+											<td>Generator Set II</td>
+											<td>Basement 2</td>
+											<td>--</td>
+											<td>Demeter Renee Caubang</td>
+											<td>September 29, 2021</td>
+											<td>September 29, 2021</td>
+											<td><p class="text-danger">Done (with issues)</p></td>
+										</tr>
+										<tr data-href="createReport_GenSet.html">
+											<th scope="row">5</th>
+											<td>Check overheating A/C</td>
+											<td>Air Conditioner</td>
+											<td>6th floor</td>
+											<td>606</td>
+											<td>Jasffer padigdig</td>
+											<td>September 16, 2021</td>
+											<td>September 16, 2021</td>
+											<td>Pending</p></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>		
+				</div>
+			</div>
+    	</div>
+
+    	<!--USERS -->
+    	<div class="cell_users">
+    		<div class="card card-flexible" style="background: linear-gradient(to right, #ACCBE1 0%, #6998AB 100%); color:black; text-align: left;">
+					<div class="card-body">
+						<h2>USERS</h2>
+						<!-- <span><a href="users.html" class="btn btn-success" role="button" aria-pressed="true">Go to Users Page</a></span><br><br> -->
+						<div class="table-wrapper-scroll-y my-custom-scrollbar table-flexible">
+								<table class="table table-dark mb-0">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>No. of Tasks</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-href="">
+											<td>Christian Paul Duria</td>
+											<td>3</td>
+										</tr>
+										<tr data-href="">
+											<td>Demeter Caubang</td>
+											<td>5</td>
+										</tr>
+										<tr data-href="#">
+											<td>Jan Laurene Manrique</td>
+											<td>2</td>
+										</tr>
+										<tr data-href="#">
+											<td>Jasffer Padigdig</td>
+											<td>1</td>
+										</tr>
+										<tr data-href="#">
+											<td>Trisha Tolentino</td>
+											<td>3</td>
+										</tr>
+										<tr data-href="#">
+											<td>Kristine Garcia</td>
+											<td>7</td>
+										</tr>
+										<tr data-href="#">
+											<td>Marco Reyes</td>
+											<td>5</td>
+										</tr>
+										<tr data-href="#">
+											<td>Juan dela Cruz</td>
+											<td>4</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+					</div>
+				</div>
+    	</div>
+    </div>
+
+	</div> <!-- end div -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
+	<script type="text/javascript" src="../assets/js/keen-analytics.js"></script>
+		<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () =>{
+			const rows = document.querySelectorAll("tr[data-href]");
+			
+			rows.forEach(row => {
+				row.addEventListener("click", ()=>{
+					window.location.href = row.dataset.href;
+				});
+			});
+		});
+	</script>
 	</body>
 </html>

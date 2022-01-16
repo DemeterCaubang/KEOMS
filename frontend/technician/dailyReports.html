@@ -13,6 +13,13 @@
 				font-family: 'Josefin Sans', sans-serif;
 				background-color: #fff;
 			}
+		tr[data-href]{
+			cursor: pointer;
+			transition: background-color 500ms ease-out 100ms;
+		}
+		tr[data-href]:hover{
+			background-color:#e5e5e5;
+		}
 		</style>
 	</head>
 	<body>
@@ -38,45 +45,87 @@
         </div> 
     </div>
 	<div class="main_content">
-		<div class="header">DAILY REPORTS</div>	
-        <div class="info">
-            <a href="createReport.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW REPORT</a>
-            <br></br>
-            <table class="table table-reflow">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Table heading</th>
-                  <th>Table heading</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td><a href="createTask.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW TASK</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td><a href="createTask.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW TASK</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                  <td><a href="createTask.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW TASK</a></td>
-                </tr>
-              </tbody>
-            </table>
-      </div>
-    </div>
+		<div class="header">DAILY REPORTS</div>  
+				<div class="info">
+					<a href="createTask.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW TASK</a>
+					<br><br/>
+					<table class="table table-reflow">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Task</th>
+								<th>Machine</th>
+								<th>Floor</th>
+								<th>Room Number</th>
+								<th>Date Submitted</th>
+								<th>Issue/For Repair</th>
+								<th>Issue Status</th>
+								<th>Submitted By</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-href="dailyReports_aircon(done).html">
+								<th scope="row">1</th>
+								<td>Leaktest</td>
+								<td>Aircon</td>
+								<td>9th Floor</td>
+								<td>916-A</td>
+								<td>January 15, 2022</td>
+								<td>No</td>
+								<td>Done</td>
+								<td>Christian Paul Duria</td>
+							</tr>
+							<tr data-href="dailyReports_aircon(not_done).html">
+								<th scope="row">2</th>
+								<td>General Cleaning</td>
+								<td>Aircon</td>
+								<td>6th Floor</td>
+								<td>608-A</td>
+								<td>January 15, 2022</td>
+								<td>Yes</td>
+								<td>Not Done</td>
+								<td>Jan Laurene Manrique</td>
+							</tr>
+							<tr data-href="dailyReports_genset(done).html">
+								<th scope="row">3</th>
+								<td>Voltage Test</td>
+								<td>Generator Set II</td>
+								<td>Basement 2</td>
+								<td>--</td>
+								<td>January 15, 2022</td>
+								<td>No</td>
+								<td>Done</td>
+								<td>Demeter Renee Caubang</td>
+							</tr>
+							<tr data-href="dailyReports_aircon(for_repair).html">
+								<th scope="row">4</th>
+								<td>Pressure Test</td>
+								<td>Aircon</td>
+								<td>2nd Floor</td>
+								<td>209-C</td>
+								<td>January 15, 2022</td>
+								<td>Yes</td>
+								<td>Done</td>
+								<td>Trisha Nicole Tolentino</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () =>{
+			const rows = document.querySelectorAll("tr[data-href]");
+			
+			rows.forEach(row => {
+				row.addEventListener("click", ()=>{
+					window.location.href = row.dataset.href;
+				});
+			});
+		});
+	</script>
 	</body>
 </html>
