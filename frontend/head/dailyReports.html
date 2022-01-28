@@ -53,8 +53,7 @@
 				<div class="info">
 					<a href="createTask.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW TASK</a>
 					<br></br>
-					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-					<table class="table table-reflow">
+					<table id="myTable" class="table table-reflow">
 						<thead>
 							<tr>
 								<th>ID</th>
@@ -131,27 +130,15 @@
 				});
 			});
 		});
-		function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
 	</script>
+	<script type="text/javascript">
+		// Basic example
+$(document).ready(function () {
+  $('#myTable').DataTable({
+    "pagingType": "simple" // "simple" option for 'Previous' and 'Next' buttons only
+  });
+  $('.dataTables_length').addClass('bs-select');
+});
+</script>
 	</body>
 </html>
