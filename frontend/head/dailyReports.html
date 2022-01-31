@@ -53,6 +53,8 @@
 				<div class="info">
 					<a href="createTask.html" class="btn btn-success btn-lg active" role="button" aria-pressed="true">ASSIGN NEW TASK</a>
 					<br></br>
+					<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
+					<br></br>
 					<table id="myTable" class="table table-reflow">
 						<thead>
 							<tr>
@@ -120,25 +122,25 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</div>
-	<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", () =>{
-			const rows = document.querySelectorAll("tr[data-href]");
-			
-			rows.forEach(row => {
-				row.addEventListener("click", ()=>{
-					window.location.href = row.dataset.href;
-				});
-			});
-		});
+	<script>
+		function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
 	</script>
-	<script type="text/javascript">
-		// Basic example
-$(document).ready(function () {
-  $('#myTable').DataTable({
-    "pagingType": "simple" // "simple" option for 'Previous' and 'Next' buttons only
-  });
-  $('.dataTables_length').addClass('bs-select');
-});
-</script>
 	</body>
 </html>
