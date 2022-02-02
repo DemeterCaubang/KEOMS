@@ -23,6 +23,19 @@
 		a{
 			color:#1d2124;
 		}
+		.pagination a {
+  		color: black;
+  		float: left;
+  		padding: 8px 16px;
+  		text-decoration: none;
+		}
+
+		.pagination a.active {
+  		background-color: #4CAF50;
+  		color: white;
+		}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
 		</style>
 	</head>
 	<body>
@@ -72,7 +85,7 @@
 						<tbody>
 							<tr data-href="dailyReports_aircon(done).html">
 								<th scope="row">1</th>
-								<td>Leaktest</td>
+								<td>Leak Test</td>
 								<td><a href="equipmentInventory_aircon(OK).html">Aircon</a></td>
 								<td>9th Floor</td>
 								<td>916-A</td>
@@ -98,7 +111,7 @@
 								<td><a href="equipmentInventory_aircon(OK).html">Generator Set II</a></td>
 								<td>Basement 2</td>
 								<td>--</td>
-								<td>January 15, 2022</td>
+								<td>November 15, 2021</td>
 								<td>No</td>
 								<td>Done</td>
 								<td>Demeter Renee Caubang</td>
@@ -114,8 +127,35 @@
 								<td>Done</td>
 								<td>Trisha Nicole Tolentino</td>
 							</tr>
+							<tr data-href="dailyReports_aircon(for_repair).html">
+								<th scope="row">5</th>
+								<td>Leak Test</td>
+								<td><a href="equipmentInventory_aircon(OK).html">Aircon</a></td>
+								<td>4th Floor</td>
+								<td>402- A</td>
+								<td>January 19, 2022</td>
+								<td>No</td>
+								<td>Not Done</td>
+								<td>Demeter Renee Caubang</td>
+							</tr>
+							<tr data-href="dailyReports_aircon(for_repair).html">
+								<th scope="row">6</th>
+								<td>Pressure Test</td>
+								<td><a href="equipmentInventory_aircon(OK).html">Aircon</a></td>
+								<td>6th Floor</td>
+								<td>607-C</td>
+								<td>December 10, 2021</td>
+								<td>Yes</td>
+								<td>Done</td>
+								<td>Jasffer Padigdig</td>
+							</tr>
 						</tbody>
 					</table>
+					<div class="pagination">
+  						<a href="#">&laquo;</a>
+  						<a href="#">1</a>
+  						<a href="#">&raquo;</a>
+						</div>
 				</div>
 			</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -141,6 +181,16 @@
     }       
   }
 }
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
 	</script>
 	</body>
 </html>
